@@ -1,3 +1,5 @@
+console.log("Hola Mundo");
+
 let nombre = "Fernando";
 console.log(nombre);
 
