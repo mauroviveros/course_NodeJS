@@ -1,3 +1,15 @@
+#### 0.0.2 (2022-03-08)
+
+##### New Features
+
+* 16. Const vs Let vs Var ([c7e86d7c](https://github.com/maurodviveros/course_NodeJS/commit/c7e86d7c56df05ea98b084d3e92ecfd5cc863f6a))
+* 10. Ciclo de eventos de Node - Ejemplos ([7493833c](https://github.com/maurodviveros/course_NodeJS/commit/7493833c97b131a0af9436a79b9f3cedb39f00ee))
+* 9. Hola Mundo en Node9. Hola Mundo en Node ([a6d3a293](https://github.com/maurodviveros/course_NodeJS/commit/a6d3a293e33ead1995ccc97756da7ea2658cbc54))
+
+##### Bug Fixes
+
+* Correccion nombres de archivos seccion 01 ([9ed5405d](https://github.com/maurodviveros/course_NodeJS/commit/9ed5405d358b0c9f487d5d5a5f759c8e4d7847f5))
+
 #### 0.0.1 (2022-03-08)
 
 ##### Build System / Dependencies
