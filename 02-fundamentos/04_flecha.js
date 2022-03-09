@@ -1,7 +1,7 @@
-function sumar(a, b){
+
+const sumar = function(a, b){
     return a + b;
 };
-
 const sumarArrow = (a, b) => a + b;
 const saludarArrow = () => "Hola Mundo";
 
