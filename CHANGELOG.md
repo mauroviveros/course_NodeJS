@@ -1,3 +1,22 @@
+#### 0.0.3 (2022-03-09)
+
+##### New Features
+
+* 29. Inicio del proyecto - Sección 429. Inicio del proyecto - Sección 4 ([302e1e49](https://github.com/maurodviveros/course_NodeJS/commit/302e1e492b31889b77921f30023c6d4b5ee4853a))
+* 25. Async - Await ([36812ccc](https://github.com/maurodviveros/course_NodeJS/commit/36812ccc79bea1f9d36c1d2d2965f1330d7992aa))
+* Promesas en cadena ([8e5401da](https://github.com/maurodviveros/course_NodeJS/commit/8e5401dac5d9fd52fd8045df85cd6818e86fee1f))
+* 23. Promesas ([2df320b6](https://github.com/maurodviveros/course_NodeJS/commit/2df320b64a2cea1d0b83b6a265a562730cd58fee))
+* 22. Callback Hell ([fa4285ab](https://github.com/maurodviveros/course_NodeJS/commit/fa4285ab019eb440b97476e1389a3b1125706bb0))
+* 21. Problemas comunes con los callbacks ([942a572f](https://github.com/maurodviveros/course_NodeJS/commit/942a572f97fbe2b4a11f9482e7811e55e5fc5925))
+* 20. Callbacks ([9b8b643c](https://github.com/maurodviveros/course_NodeJS/commit/9b8b643c83bfcfb3a3a1be59ab8f5dc34ab5eb15))
+* 19. Funciones de Flecha ([092757dd](https://github.com/maurodviveros/course_NodeJS/commit/092757dd4d355a838a6f946df96c305caa54a5ce))
+* 18. Destructuración de objetos ([bc16860f](https://github.com/maurodviveros/course_NodeJS/commit/bc16860fc094405399d4190e9efc3dd976042d5c))
+* 17. Templates literales ([8ada9490](https://github.com/maurodviveros/course_NodeJS/commit/8ada949052508714a997af05d022fc8ee5f1a47d))
+
+##### Bug Fixes
+
+* declaracion funcion flecha ([1531c4a4](https://github.com/maurodviveros/course_NodeJS/commit/1531c4a4975ac96d5b83e2d97b818c89b2f0afa4))
+
 #### 0.0.2 (2022-03-08)
 
 ##### New Features
