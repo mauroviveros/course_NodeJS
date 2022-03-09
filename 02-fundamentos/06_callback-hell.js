@@ -10,7 +10,6 @@ const salarios = [
     { id: 3, salario: 2000 }
 ];
 
-
 const getEmpleadoByID = (id, callback)=>{
     let err = null;
     const empleado = empleados.find((empleado)=>{
@@ -36,6 +35,7 @@ const getSalarioByID = (id, callback)=>{
 };
 
 let _id = 3;
+
 
 getEmpleadoByID(_id, (err, empleado)=>{
     if(err){
