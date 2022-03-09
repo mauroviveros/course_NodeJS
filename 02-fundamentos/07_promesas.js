@@ -31,6 +31,9 @@ const getSalarioByID = (id)=>{
         else resolve(salario);
     });
 };
+
+
+
 let _id = 3;
 let _empleado;
 
@@ -39,7 +42,6 @@ getEmpleadoByID(_id).then((empleado)=>{
     return getSalarioByID(_id);
 }).then((salario)=>{
     console.log(`Empleado: ${_empleado.nombre}, tiene un salario de: ${salario.salario}`);
-
 }).catch((err)=>{
     console.log("ERROR!");
     return console.log(err);
