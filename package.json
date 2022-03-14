@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/maurodviveros/course_NodeJS/issues"
   },
-  "homepage": "https://github.com/maurodviveros/course_NodeJS#readme"
+  "homepage": "https://github.com/maurodviveros/course_NodeJS#readme",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
 }
