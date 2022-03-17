@@ -1,3 +1,16 @@
+#### 0.0.4 (2022-03-17)
+
+##### New Features
+
+* 33. package.json - init - install - uninstall ([8c7b61ed](https://github.com/maurodviveros/course_NodeJS/commit/8c7b61ed6e64de1e3fd3bf88c235cbfc0a50fcf2))
+* 31. Importar archivos de nuestro proyecto ([f151b463](https://github.com/maurodviveros/course_NodeJS/commit/f151b463ca611f46a942115ae4631c6df87ed680))
+* 30. Requerir paquetes - require ([50e304c6](https://github.com/maurodviveros/course_NodeJS/commit/50e304c637240f3a3e702d49b3d74fd2387ce8e7))
+
+##### Other Changes
+
+* trasnport files ([c0f65b58](https://github.com/maurodviveros/course_NodeJS/commit/c0f65b58f1debde18b796f2c03c0b3455c0853e1))
+* add gitignore ([df76be55](https://github.com/maurodviveros/course_NodeJS/commit/df76be559d062089ab0dec25e77821065a3b4d2f))
+
 #### 0.0.3 (2022-03-09)
 
 ##### New Features
