@@ -1,4 +1,5 @@
 const fs = require("fs");
+const colors = require("colors");
 const printTable = require("./01_app-table");
 
 
@@ -14,5 +15,5 @@ let salida = printTable(base, limite);
 fs.writeFile(`./tmp/03_02_tabla-${base}x${limite}.txt`, salida, (err)=>{
     if(err) throw err;
 
-    console.log(`03_02_tabla-${base}x${limite}.txt creada`);
+    console.log(colors.green(`03_02_tabla-${base}x${limite}.txt creada`));
 });
