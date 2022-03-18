@@ -1,3 +1,9 @@
+#### 0.0.5 (2022-03-18)
+
+##### New Features
+
+* 34. Yargs ([2a846f5d](https://github.com/maurodviveros/course_NodeJS/commit/2a846f5d947adc96d10bda8f0b3356bf1a8d62a2))
+
 #### 0.0.4 (2022-03-17)
 
 ##### New Features
