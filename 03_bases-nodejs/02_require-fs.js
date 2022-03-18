@@ -1,18 +1,20 @@
 const fs = require("fs");
+const path = require("path");
 const colors = require("colors");
+const argv = require("yargs").argv;
 const printTable = require("./01_app-table");
 
+const dir = path.join(__dirname, "./../tmp");
 
-let base = 5;
-if(process.argv[2]) base = process.argv[2].split("=")[1] || 5;
+let base = argv.base || 5;
+let limite = argv.limite || 10;
 
-let limite = 10;
-if(process.argv[3]) limite = process.argv[3].split("=")[1] || 10;
+let table = printTable(base, limite);
 
-
-let salida = printTable(base, limite);
-
-fs.writeFile(`./tmp/03_02_tabla-${base}x${limite}.txt`, salida, (err)=>{
+if(!fs.existsSync(dir)){
+    fs.mkdirSync(dir, { recursive: true });
+};
+fs.writeFile(`${dir}/03_02_tabla-${base}x${limite}.txt`, table, (err)=>{
     if(err) throw err;
 
     console.log(colors.green(`03_02_tabla-${base}x${limite}.txt creada`));
