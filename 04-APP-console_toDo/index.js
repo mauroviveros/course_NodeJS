@@ -1,11 +1,11 @@
 const colors = require("colors");
 
-
-
+const { mostrarMenu, pausa } = require("./helpers/mensajes");
 
 
 const main = async()=>{
-    console.log(colors.green("Hola Mundo"));
+    await mostrarMenu();
+    // await pausa();
 };
 
 main();
