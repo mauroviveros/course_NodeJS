@@ -22,9 +22,11 @@ const mostrarMenu = ()=>{
     console.log(`${colors.green("6.")} Borrar tarea`);
     console.log(`${colors.green("0.")} Salir`);
 
-    interface.question("Seleccione una opción: ", (opt)=>{
-        console.log(opt);
-        interface.close();
+    return new Promise( resolve =>{
+        interface.question("Seleccione una opción: ", (opt)=>{
+            interface.close();
+            resolve(opt);
+        });
     });
 };
 
@@ -33,10 +35,14 @@ const pausa = ()=>{
         input: process.stdin,
         output: process.stdout
     });
-
-    interface.question(`Precione ${ colors.green("ENTER") } para continuar: `, (opt)=>{
-        interface.close();
+    
+    return new Promise(resolve =>{
+        interface.question(`\nPrecione ${ colors.green("ENTER") } para continuar: `, ()=>{
+            interface.close();
+            resolve();
+        });
     });
+
 };
 
 module.exports = {
