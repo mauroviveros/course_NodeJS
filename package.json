@@ -2,7 +2,7 @@
   "name": "course_nodejs",
   "description": "Node: De cero a experto",
   "author": "Mauro Daniel Viveros <maurod.viveros@gmail.com> (TRY Ubbe)",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "license": "MIT",
   "scripts": {
     "version": "git add CHANGELOG.md",

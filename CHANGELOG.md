@@ -1,3 +1,22 @@
+#### 0.0.7 (2022-03-26)
+
+##### New Features
+
+* 54. Guardar tareas en un archivo de texto ([f80b415c](https://github.com/maurodviveros/course_NodeJS/commit/f80b415c6f3e8968a175408d9092ba8db4a0f5f2))
+* 53. Transformar objeto a un arreglo - Detalles estéticos ([a970ad9b](https://github.com/maurodviveros/course_NodeJS/commit/a970ad9b384400f5efc67b1f89656e01332823a5))
+* 52. Crear y listar tareas ([2d67a091](https://github.com/maurodviveros/course_NodeJS/commit/2d67a091727f38e74dbede38f8ad0a621aedae89))
+* 51. Lógica para el manejo de las tareas por hacer ([fc36a1b9](https://github.com/maurodviveros/course_NodeJS/commit/fc36a1b9051baf3679351430849cd570c765c961))
+* 50. Opciones del menú interactivo ([93f52dc8](https://github.com/maurodviveros/course_NodeJS/commit/93f52dc8cc8a5b3b8f953b7ae6e7b4a88bb3faef))
+* 49. Construir el menú interactivo - Inquirer ([6fa85b4a](https://github.com/maurodviveros/course_NodeJS/commit/6fa85b4abb493fff117af7fa01babde091dfeea0))
+* 47. Repetir el menú de forma infinita ([769d9cf9](https://github.com/maurodviveros/course_NodeJS/commit/769d9cf94db0aabc5f22e2cec3e628044ec8d410))
+* 46. stdin - stdout - Readline ([c4951d05](https://github.com/maurodviveros/course_NodeJS/commit/c4951d054b4e27a11247872ac5e51aeaee696cdc))
+* 45. Inicio de proyecto - Tareas por hacer ([f99e36da](https://github.com/maurodviveros/course_NodeJS/commit/f99e36dafe6f689ab9604ecb93a14c273fc1ba73))
+* 35. Configuraciones de Yargs ([80c23017](https://github.com/maurodviveros/course_NodeJS/commit/80c230177dd27c57cd7535c348ade420f12c538a))
+
+##### Other Changes
+
+* Add package inquirer ([4d4f6d19](https://github.com/maurodviveros/course_NodeJS/commit/4d4f6d195fdd8ea5c551a6e46d699438cddf8a46))
+
 #### 0.0.6 (2022-03-18)
 
 #### 0.0.5 (2022-03-18)
