@@ -19,7 +19,7 @@ const main = async()=>{
                 tareas.crearTarea(descripcion);
                 break;
             case "2":
-                console.log(tareas._listado);
+                console.log(tareas.listArr);
                 break;
             case "3":
                 break;

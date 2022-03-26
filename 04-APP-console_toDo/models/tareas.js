@@ -3,6 +3,11 @@
 const Tarea = require("./tarea");
 
 class Tareas{
+
+    get listArr(){
+        return Object.values(this._listado);
+    };
+
     constructor(){
         this._listado = {};
     };
