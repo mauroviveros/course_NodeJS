@@ -42,8 +42,25 @@ const pausa = async()=>{
     }]);
 };
 
+const leerInput = async(message)=>{
+    const { descripcion } = await inquirer.prompt([{
+        type: "input",
+        name: "descripcion",
+        message,
+        validate(value){
+            if(value.length === 0){
+                return 'Por favor Ingrese un valor';
+            };
+            return true;
+        }
+    }]);
+
+    return descripcion;
+};
+
 module.exports = {
     menuChoices,
+    leerInput,
     menu,
     pausa
 };
