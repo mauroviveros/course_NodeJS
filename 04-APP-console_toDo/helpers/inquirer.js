@@ -1,6 +1,7 @@
+'use strict';
+
 const inquirer = require("inquirer");
 const colors = require("colors");
-
 
 
 const menuChoices = [
