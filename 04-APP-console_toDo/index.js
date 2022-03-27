@@ -3,7 +3,7 @@
 const colors = require("colors");
 const { guardarDB, leerDB } = require("./helpers/filseSaver");
 
-const { menuChoices, menu, pausa, leerInput, borrarTareasMenu, confirmar } = require("./helpers/inquirer");
+const { menuChoices, menu, pausa, leerInput, borrarTareasMenu, confirmar, listarTareas } = require("./helpers/inquirer");
 const Tareas = require("./models/tareas");
 
 
@@ -39,9 +39,10 @@ const main = async()=>{
                 tareasList.forEach((t)=> console.log(t));
                 break;
             case "5":
+                const _ids = await listarTareas(tareas._listado, true);
                 break;
             case "6":
-                const _id = await borrarTareasMenu(tareas._listado);
+                const _id = await listarTareas(tareas._listado);
                 const ok = await confirmar("¿Estas seguro?");
                 if(ok) tareas.borrarTarea(_id);
                 break;

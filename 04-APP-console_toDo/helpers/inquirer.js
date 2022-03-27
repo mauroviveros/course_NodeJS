@@ -59,21 +59,20 @@ const leerInput = async(message)=>{
     return descripcion;
 };
 
-const borrarTareasMenu = async (tareas)=>{
-
+const listarTareas = async (tareas, checked)=>{
     const tareasChoises = Object.values(tareas).map((tarea, index)=>{
-        const id = colors.green(`${index + 1}.`);
-        return{
+        let tareaChoise = {
             value: tarea._id,
-            name: formatTareaItem(index, tarea)
-        }
+            name: formatTareaItem(index, tarea),
+            checked: !!tarea.completadoEn
+        };
+        return tareaChoise;
     });
-    // tareasChoises.unshift({ value: 0, name: `${colors.green("0.")} Cancelar` });
 
     const { _id } = await inquirer.prompt([{
-        type: "list",
+        type: checked  ? "checkbox" : "list",
+        message: checked ? "Selecciones" : "Borrar",
         name: "_id",
-        message: "Borrar",
         choices: tareasChoises
     }]);
 
@@ -93,7 +92,7 @@ const confirmar = async (message)=>{
 module.exports = {
     menuChoices,
     leerInput,
-    borrarTareasMenu,
+    listarTareas,
     menu,
     pausa,
     confirmar
