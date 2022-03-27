@@ -1,3 +1,13 @@
+### 0.1.0 (2022-03-27)
+
+##### New Features
+
+* 62. Marcar como completadas o pendientes las tareas ([eac3da16](https://github.com/maurodviveros/course_NodeJS/commit/eac3da160416fde6cf564163c5a5e413f48e554e))
+* 61. Múltiples selecciones ([fd60d697](https://github.com/maurodviveros/course_NodeJS/commit/fd60d697df50107409174b962b08c6bfc90d9fde))
+* 60. Confirmar y borrar tarea ([6b22db31](https://github.com/maurodviveros/course_NodeJS/commit/6b22db319f1b48a8f339c9eaba241398324c3cf8))
+* 59. Listado para borrar ([d9bac747](https://github.com/maurodviveros/course_NodeJS/commit/d9bac747a56cad3ae19eddc8464db7ae106cddd6))
+* 55. Leer nuestra base de datos55. Leer nuestra base de datos ([ed042145](https://github.com/maurodviveros/course_NodeJS/commit/ed0421454a2be1f4a22984c4fb2b1e4d764667fc))
+
 #### 0.0.7 (2022-03-26)
 
 ##### New Features
