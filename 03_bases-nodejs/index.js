@@ -1,0 +1,1 @@
+require("./02_require-fs");
