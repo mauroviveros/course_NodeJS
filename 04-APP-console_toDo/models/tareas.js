@@ -34,6 +34,13 @@ class Tareas{
             return formatTareaItem(index, tarea);
         });
     };
+
+    toggleCompletadas(ids){
+        Object.keys(this._listado).forEach((tareaID)=>{
+            if(ids.includes(tareaID)) this._listado[tareaID].completadoEn = new Date().toISOString();
+            else this._listado[tareaID].completadoEn = null;
+        });
+    };
 };
 
 module.exports = Tareas;

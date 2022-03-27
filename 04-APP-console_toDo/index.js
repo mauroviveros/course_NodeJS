@@ -40,6 +40,7 @@ const main = async()=>{
                 break;
             case "5":
                 const _ids = await listarTareas(tareas._listado, true);
+                tareas.toggleCompletadas(_ids);
                 break;
             case "6":
                 const _id = await listarTareas(tareas._listado);
