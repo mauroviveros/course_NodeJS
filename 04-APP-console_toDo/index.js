@@ -1,7 +1,7 @@
 'use strict';
 
 const colors = require("colors");
-const { guardarDB } = require("./helpers/filseSaver");
+const { guardarDB, leerDB } = require("./helpers/filseSaver");
 
 const { menuChoices, menu, pausa, leerInput } = require("./helpers/inquirer");
 const Tareas = require("./models/tareas");
@@ -10,8 +10,12 @@ const Tareas = require("./models/tareas");
 const main = async()=>{
     // const options = [ "0", "1", "2", "3", "4", "5", "6" ];
     const tareas = new Tareas();
-    guardarDB(JSON.stringify(tareas._listado, null, 2));
     let opt;
+
+    const tareasDB = leerDB();
+    if(tareasDB) tareas._listado = tareasDB;
+    else guardarDB(JSON.stringify(tareas._listado, null, 2));
+
     do{
         
         opt = await menu();
