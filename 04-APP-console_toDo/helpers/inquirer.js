@@ -2,6 +2,7 @@
 
 const inquirer = require("inquirer");
 const colors = require("colors");
+const { formatTareaItem } = require("./formatter");
 
 
 const menuChoices = [
@@ -58,9 +59,29 @@ const leerInput = async(message)=>{
     return descripcion;
 };
 
+const borrarTareasMenu = async (tareas)=>{
+
+    const tareasChoises = Object.values(tareas).map((tarea, index)=>{
+        const id = colors.green(`${index + 1}.`);
+        return{
+            value: tarea._id,
+            name: formatTareaItem(index, tarea)
+        }
+    })
+    const { _id } = await inquirer.prompt([{
+        type: "list",
+        name: "_id",
+        message: "Borrar",
+        choices: tareasChoises
+    }]);
+
+    return _id;
+};
+
 module.exports = {
     menuChoices,
     leerInput,
+    borrarTareasMenu,
     menu,
     pausa
 };
