@@ -3,7 +3,7 @@
 const colors = require("colors");
 const { guardarDB, leerDB } = require("./helpers/filseSaver");
 
-const { menuChoices, menu, pausa, leerInput, borrarTareasMenu } = require("./helpers/inquirer");
+const { menuChoices, menu, pausa, leerInput, borrarTareasMenu, confirmar } = require("./helpers/inquirer");
 const Tareas = require("./models/tareas");
 
 
@@ -42,7 +42,8 @@ const main = async()=>{
                 break;
             case "6":
                 const _id = await borrarTareasMenu(tareas._listado);
-                tareas.borrarTarea(_id);
+                const ok = await confirmar("¿Estas seguro?");
+                if(ok) tareas.borrarTarea(_id);
                 break;
 
             case "0":

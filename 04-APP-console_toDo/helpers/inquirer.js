@@ -67,7 +67,9 @@ const borrarTareasMenu = async (tareas)=>{
             value: tarea._id,
             name: formatTareaItem(index, tarea)
         }
-    })
+    });
+    // tareasChoises.unshift({ value: 0, name: `${colors.green("0.")} Cancelar` });
+
     const { _id } = await inquirer.prompt([{
         type: "list",
         name: "_id",
@@ -78,10 +80,21 @@ const borrarTareasMenu = async (tareas)=>{
     return _id;
 };
 
+const confirmar = async (message)=>{
+    const { ok } = await inquirer.prompt([{
+        type: "confirm",
+        name: "ok",
+        message
+    }]);
+
+    return ok;
+}
+
 module.exports = {
     menuChoices,
     leerInput,
     borrarTareasMenu,
     menu,
-    pausa
+    pausa,
+    confirmar
 };

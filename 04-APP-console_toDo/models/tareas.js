@@ -20,6 +20,7 @@ class Tareas{
 
     borrarTarea(_id){
         if(this._listado[_id]) delete this._listado[_id];
+        console.log("Tarea Borrada");
     };
 
     listarTareas(filtro){
