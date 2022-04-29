@@ -1,3 +1,18 @@
+#### 0.1.1 (2022-04-29)
+
+##### New Features
+
+* 69. Modelo para controlar la aplicación ([65b9a96e](https://github.com/maurodviveros/course_NodeJS/commit/65b9a96efb2be650ce1ab7fc0b2f66300f2f5310))
+* 67. Inicio de proyecto - ClimaApp ([b3438435](https://github.com/maurodviveros/course_NodeJS/commit/b3438435517487ad61bf380cb6e3339cf1d4b56a))
+
+##### Bug Fixes
+
+* rename 04 ([179f0b5d](https://github.com/maurodviveros/course_NodeJS/commit/179f0b5d9d50e8683e3af9946efff4bb2979428f))
+
+##### Other Changes
+
+* Add index.js 03 ([5b259499](https://github.com/maurodviveros/course_NodeJS/commit/5b2594993f55b3f36bbcae5690245df0b0703aaf))
+
 ### 0.1.0 (2022-03-27)
 
 ##### New Features
