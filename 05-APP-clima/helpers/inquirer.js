@@ -2,16 +2,10 @@
 
 const inquirer = require("inquirer");
 const colors = require("colors");
-const { formatTareaItem } = require("./formatter");
-
 
 const menuChoices = [
-    { value: "1", name: `${colors.green("1.")} Crear tarea` },
-    { value: "2", name: `${colors.green("2.")} Listar tareas` },
-    { value: "3", name: `${colors.green("3.")} Listar tareas completadas` },
-    { value: "4", name: `${colors.green("4.")} Listar tareas pendientes` },
-    { value: "5", name: `${colors.green("5.")} Completar tarea(s)` },
-    { value: "6", name: `${colors.green("6.")} Borrar tarea` },
+    { value: "1", name: `${colors.green("1.")} Buscar Ciudad` },
+    { value: "2", name: `${colors.green("2.")} Historial` },
     { value: "0", name: `${colors.green("0.")} Salir` }
 ]
 const _menuPrompt = [
@@ -59,25 +53,6 @@ const leerInput = async(message)=>{
     return descripcion;
 };
 
-const listarTareas = async (tareas, checked)=>{
-    const tareasChoises = Object.values(tareas).map((tarea, index)=>{
-        let tareaChoise = {
-            value: tarea._id,
-            name: formatTareaItem(index, tarea),
-            checked: !!tarea.completadoEn
-        };
-        return tareaChoise;
-    });
-
-    const { _id } = await inquirer.prompt([{
-        type: checked  ? "checkbox" : "list",
-        message: checked ? "Selecciones" : "Borrar",
-        name: "_id",
-        choices: tareasChoises
-    }]);
-
-    return _id;
-};
 
 const confirmar = async (message)=>{
     const { ok } = await inquirer.prompt([{
@@ -92,7 +67,6 @@ const confirmar = async (message)=>{
 module.exports = {
     menuChoices,
     leerInput,
-    listarTareas,
     menu,
     pausa,
     confirmar
