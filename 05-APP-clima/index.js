@@ -16,7 +16,7 @@ const main = async()=>{
         switch(opt){
             case "1":
                 const lugar = await leerInput("Ciudad: ");
-                console.log(lugar);
+                await busquedas.getCiudades();
                 // Mostrar Mensaje
                 // Buscar los lugares
                 // Seleccionar el Lugar

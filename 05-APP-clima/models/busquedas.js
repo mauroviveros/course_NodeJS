@@ -1,4 +1,5 @@
 'use strict';
+const axios = require("axios");
 
 module.exports = class Busquedas{
     historial = ["Tegucigalpa", "Madrid", "Bogotá"];
@@ -6,7 +7,13 @@ module.exports = class Busquedas{
     constructor(){};
 
     async getCiudades(ciudadQuery){
-        // HTTP request
+        try{
+            const resp = await axios.get("https://reqres.in/api/users?page=2");
+            console.log(resp.data);
+
+        } catch(error){
+
+        };
 
         return [];
     };
