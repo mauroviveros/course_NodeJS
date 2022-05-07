@@ -1,3 +1,17 @@
+#### 0.1.2 (2022-05-07)
+
+##### New Features
+
+* 73. Mapbox Search API y Token de acceso ([2d837000](https://github.com/maurodviveros/course_NodeJS/commit/2d837000c181a276a2b4145cfebd064a4b0dbe6b))
+* 71. Realizar peticiones HTTP desde Node ([b9ce6f1e](https://github.com/maurodviveros/course_NodeJS/commit/b9ce6f1ec8f65e301c280645b7a6ffc2bff708d4))
+
+##### Bug Fixes
+
+* add dotenv package ([ea722852](https://github.com/maurodviveros/course_NodeJS/commit/ea72285289be3ad142fcff297759049c1ae6da48))
+* update README.md ([8b028e4a](https://github.com/maurodviveros/course_NodeJS/commit/8b028e4aefa2d8d83a8943d877d05150a7bc50c9))
+* update .gitignore ([8a82ac65](https://github.com/maurodviveros/course_NodeJS/commit/8a82ac65ea4e93594880fbf60ff5cb6cb1392244))
+* add axios package ([9c5f2332](https://github.com/maurodviveros/course_NodeJS/commit/9c5f23320e2527504caacec6ce70afdd2e8ed644))
+
 #### 0.1.1 (2022-04-29)
 
 ##### New Features
