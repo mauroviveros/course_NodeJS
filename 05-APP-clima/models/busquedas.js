@@ -8,8 +8,17 @@ module.exports = class Busquedas{
     constructor(){};
 
     async getCiudades(ciudadQuery){
+        const instance = axios.create({
+            baseURL: `https://api.mapbox.com/geocoding/v5/mapbox.places/${ ciudadQuery }.json`,
+            params:{
+                "language"      : "es",
+                "limit"         : 5,
+                "access_token"  : process.env.MAPBOX_TOKEN
+            }
+        });
+
         try{
-            const resp = await axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/buenos%20aires.json?language=es&access_token=${process.env.MAPBOX_TOKEN}`);
+            const resp = await instance.get();
             console.log(resp.data);
 
         } catch(error){
