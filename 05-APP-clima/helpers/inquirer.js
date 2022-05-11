@@ -3,6 +3,8 @@
 const inquirer = require("inquirer");
 const colors = require("colors");
 
+const { formatLugarItem } = require("./formatter");
+
 const menuChoices = [
     { value: "1", name: `${colors.green("1.")} Buscar Ciudad` },
     { value: "2", name: `${colors.green("2.")} Historial` },
@@ -62,12 +64,32 @@ const confirmar = async (message)=>{
     }]);
 
     return ok;
-}
+};
+
+const listarLugares = async (lugares)=>{
+    const lugaresChoises = lugares.map((lugar, index)=>{
+        let lugarChoise = {
+            value: lugar.id,
+            name: formatLugarItem(index, lugar)
+        };
+        return lugarChoise;
+    });
+
+    const { id } = await inquirer.prompt([{
+        type: "list",
+        message: "Selecciones",
+        name: "id",
+        choices: lugaresChoises
+    }]);
+
+    return id;
+};
 
 module.exports = {
     menuChoices,
     leerInput,
     menu,
     pausa,
-    confirmar
+    confirmar,
+    listarLugares
 };

@@ -3,7 +3,7 @@
 const colors = require("colors");
 // const { guardarDB, leerDB } = require("./helpers/filseSaver");
 
-const { menu, pausa, leerInput } = require("./helpers/inquirer");
+const { menu, pausa, leerInput, listarLugares } = require("./helpers/inquirer");
 const Busquedas = require("./models/busquedas");
 
 
@@ -15,8 +15,11 @@ const main = async()=>{
         
         switch(opt){
             case "1":
-                const lugar = await leerInput("Ciudad: ");
-                await busquedas.getCiudades(lugar);
+                const lugarQuery = await leerInput("Ciudad: ");
+                const lugares = await busquedas.getCiudades(lugarQuery);
+                const lugarID = await listarLugares(lugares);
+                const lugar = lugares.find(lugar => lugar.id == lugarID);
+
                 // Mostrar Mensaje
                 // Buscar los lugares
                 // Seleccionar el Lugar
@@ -24,12 +27,13 @@ const main = async()=>{
                 
                 // Mostrar Resultados
                 console.log(colors.green("\nInformacion de la ciudad\n"));
-                console.log("Ciudad: ");
-                console.log("Lat: ");
-                console.log("Lng: ");
-                console.log("Temperatura: ");
-                console.log("Minima: ");
-                console.log("Maxima: ");
+                console.log(`Ciudad: ${ lugar.nombre }`);
+                console.log(`Lat: ${ lugar.latitud }`);
+                console.log(`Lng: ${ lugar.longitud }`);
+                console.log(`Temperatura: `);
+                console.log(`Minima: `);
+                console.log(`Maxima: `);
+                console.log();
             break;
         };
 

@@ -19,7 +19,12 @@ module.exports = class Busquedas{
 
         try{
             const resp = await instance.get();
-            console.log(resp.data);
+            return resp.data.features.map(lugar => ({
+                id: lugar.id,
+                nombre: lugar.place_name,
+                latitud: lugar.center[1],
+                longitud: lugar.center[0]
+            }));
 
         } catch(error){
 

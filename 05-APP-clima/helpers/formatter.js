@@ -2,5 +2,12 @@
 
 const colors = require("colors");
 
+const formatLugarItem = (index, lugar)=>{
+    const id = colors.green(`${index + 1}.`);
 
-module.exports = {};
+    return `${id} ${lugar.nombre}`
+}
+
+module.exports = {
+    formatLugarItem
+};
