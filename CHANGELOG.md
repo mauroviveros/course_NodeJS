@@ -1,3 +1,13 @@
+#### 0.1.3 (2022-05-12)
+
+##### New Features
+
+* 81. Leer del archivo JSON ([36bc3781](https://github.com/maurodviveros/course_NodeJS/commit/36bc3781bd3278b6db40c249ce1d46e1e68cd434))
+* 78. Obtener información del clima del lugar seleccionado ([5bd0ddec](https://github.com/maurodviveros/course_NodeJS/commit/5bd0ddece7b59da855ec9bd391eaed79b22baf29))
+* 77. OpenWeather - Información del clima ([5904dd57](https://github.com/maurodviveros/course_NodeJS/commit/5904dd571b3f7a12208b680e572025fbea9503e6))
+* 76. Listar los países de forma interactiva ([93929afb](https://github.com/maurodviveros/course_NodeJS/commit/93929afb21da3d3667a3632acbb14a3f8bf99e87))
+* 74. Crear instancias de Axios ([efd1086e](https://github.com/maurodviveros/course_NodeJS/commit/efd1086e52694fe9de07550d29e189cf5b6e1ddf))
+
 #### 0.1.2 (2022-05-07)
 
 ##### New Features
