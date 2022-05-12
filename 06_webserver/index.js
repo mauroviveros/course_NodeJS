@@ -1,10 +1,12 @@
 "use strict";
-const path = require('path');
-const express = require('express');
-const app = express();
-const PORT = 8080;
+const path      = require('path');
+const hbs       = require('hbs');
+const express   = require('express');
+const app   = express();
+const PORT  = 8080;
 
-// TODO: require("hbs");
+
+hbs.registerPartials(__dirname + '/views/partials', function (err) {});
 app.set('views', path.join(__dirname,'/views'));
 app.set("view engine", "hbs");
 app.use(express.static(path.join(__dirname, 'public')));
@@ -17,13 +19,13 @@ app.get('/', (req, res)=>{
 });
 
 app.get('/generic', (req, res)=>{
-    res.render("home", {
+    res.render("generic", {
         name: "Mauro Viveros",
         title: "Curso NodeJS"
     });
 });
 app.get('/elements', (req, res)=>{
-    res.render("home", {
+    res.render("elements", {
         name: "Mauro Viveros",
         title: "Curso NodeJS"
     });
