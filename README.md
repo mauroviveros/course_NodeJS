@@ -10,6 +10,8 @@
 - Create `.env` file with the following content
   ```
   MAPBOX_TOKEN = <mapbox_token>
+  OPENWEATHER_TOKEN = <openweather_token>
   ```
   > ## Useful links
   > [MAPBOX_TOKEN](https://account.mapbox.com/access-tokens/)
+  > [OPENWEATHER_TOKEN](https://home.openweathermap.org/api_keys)
