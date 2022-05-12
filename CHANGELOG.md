@@ -1,3 +1,25 @@
+### 0.3.0 (2022-05-12)
+
+##### New Features
+
+* 97. Subir los cambios a Heroku ([3fd82f35](https://github.com/maurodviveros/course_NodeJS/commit/3fd82f35ea2f7d45550f8c16e324cb4acd91f192))
+* 96. Desplegando aplicaciones de Angular y React ([531f9b81](https://github.com/maurodviveros/course_NodeJS/commit/531f9b812f707f391bc1ee3976b68b29720162fc))
+* 95. Heroku - Subiendo nuestra aplicación a producción ([ab0ddc59](https://github.com/maurodviveros/course_NodeJS/commit/ab0ddc593a8418fefcde2e4e5629729de46db548))
+* 94. Preparar Webserver para subirlo a un hosting ([56909642](https://github.com/maurodviveros/course_NodeJS/commit/56909642d1c491ec6ff499381c7d7220ef53ecb5))
+* 93. Usando parciales con HBS ([a1ca2cc6](https://github.com/maurodviveros/course_NodeJS/commit/a1ca2cc6d83a8fac1ef5f1b6cb891f55d402721e))
+* 92. Argumentos desde el controlador ([02f88c0d](https://github.com/maurodviveros/course_NodeJS/commit/02f88c0d0647a7d24b65c4973559ecbb60e16c14))
+* 91. Handlebars ([adebbff9](https://github.com/maurodviveros/course_NodeJS/commit/adebbff964d0b3647541013237ca84f8754e880c))
+* 90. Servir un sitio web completo ([22ed413f](https://github.com/maurodviveros/course_NodeJS/commit/22ed413f713fcc4c8d0b8fa57c4e7e126a68f1a5))
+* 89. Servir contenido estático ([03355e1c](https://github.com/maurodviveros/course_NodeJS/commit/03355e1c51c958eb79a8e7a170125bf2ad1b3997))
+* 88. Introducción a EXPRESS ([65209cc2](https://github.com/maurodviveros/course_NodeJS/commit/65209cc2296cc0f8532e318ba153dc8f1f9d813e))
+* 87. Request y Response ([df36d434](https://github.com/maurodviveros/course_NodeJS/commit/df36d4348cb0e81115c9a97cf3c0f9da6f22a5df))
+* 86. Inicio de proyecto - WebServer86. Inicio de proyecto - WebServer ([8a3d09ec](https://github.com/maurodviveros/course_NodeJS/commit/8a3d09ec3c0e71c128325920d4cec809855c5fdf))
+
+##### Bug Fixes
+
+* Actualizacion README ([875fbbb2](https://github.com/maurodviveros/course_NodeJS/commit/875fbbb2039fae63bd704704b515b9ad028b9b73))
+* Actualizacion de nombres de los ejercicios ([2ffa083f](https://github.com/maurodviveros/course_NodeJS/commit/2ffa083fa07750ecbd5f7ce212e42ccc50608f16))
+
 ### 0.2.0 (2022-05-12)
 
 ##### Bug Fixes
