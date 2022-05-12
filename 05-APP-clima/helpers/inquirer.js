@@ -85,11 +85,24 @@ const listarLugares = async (lugares)=>{
     return id;
 };
 
+const mostarLugar = async(lugar)=>{
+    // Mostrar Resultados
+    console.log(colors.green("\nInformacion de la ciudad\n"));
+    console.log(`Ciudad: ${ lugar.nombre }`);
+    console.log(`Lat: ${ lugar.latitud }`);
+    console.log(`Lng: ${ lugar.longitud }`);
+    console.log(`Temperatura: ${ lugar.temp }`);
+    console.log(`Minima: ${ lugar.temp_min }`);
+    console.log(`Maxima: ${ lugar.temp_max }`);
+    console.log();
+};
+
 module.exports = {
     menuChoices,
     leerInput,
     menu,
     pausa,
     confirmar,
-    listarLugares
+    listarLugares,
+    mostarLugar
 };

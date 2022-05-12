@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 
 const dir = path.join(__dirname, "./../../tmp");
-const fileName = "todoDB.json";
+const fileName = "climaDB.json";
 const fileDir = `${dir}/${fileName}`;
 
 const guardarDB = (data)=>{
@@ -20,7 +20,14 @@ const leerDB = ()=>{
     return JSON.parse(info);
 };
 
+const updateDB = (dataItem)=>{
+    const DB = leerDB() || [];
+    DB.unshift(dataItem);
+    guardarDB(JSON.stringify(DB.slice(0, 5), null, 2));
+};
+
 module.exports = {
     guardarDB,
+    updateDB,
     leerDB
 };
