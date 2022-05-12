@@ -10,7 +10,7 @@ module.exports = class Busquedas{
     async getCiudades(ciudadQuery){
         const instance = axios.create({
             baseURL: `https://api.mapbox.com/geocoding/v5/mapbox.places/${ ciudadQuery }.json`,
-            params:{
+            params: {
                 "language"      : "es",
                 "limit"         : 5,
                 "access_token"  : process.env.MAPBOX_TOKEN
@@ -27,9 +27,25 @@ module.exports = class Busquedas{
             }));
 
         } catch(error){
-
+            return [];
         };
+    };
 
-        return [];
+    async getClima(lat, lon){
+        const instance = axios.create({
+            baseURL: "https://api.openweathermap.org/data/2.5/weather",
+            params: {
+                "appid" : process.env.OPENWEATHER_TOKEN,
+                "lat"   : lat,
+                "lon"   : lon
+            }
+        });
+
+        try{
+            const resp = await instance.get();
+            return resp.data.main;
+        } catch(eeror){
+            return [];
+        };
     };
 };
