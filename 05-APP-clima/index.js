@@ -19,6 +19,7 @@ const main = async()=>{
                 const lugares = await busquedas.getCiudades(lugarQuery);
                 const lugarID = await listarLugares(lugares);
                 const lugar = lugares.find(lugar => lugar.id == lugarID);
+                const lugarClima = await busquedas.getClima(lugar.latitud, lugar.longitud);
 
                 // Mostrar Mensaje
                 // Buscar los lugares
@@ -30,9 +31,9 @@ const main = async()=>{
                 console.log(`Ciudad: ${ lugar.nombre }`);
                 console.log(`Lat: ${ lugar.latitud }`);
                 console.log(`Lng: ${ lugar.longitud }`);
-                console.log(`Temperatura: `);
-                console.log(`Minima: `);
-                console.log(`Maxima: `);
+                console.log(`Temperatura: ${ lugarClima.temp }`);
+                console.log(`Minima: ${ lugarClima.temp_min }`);
+                console.log(`Maxima: ${ lugarClima.temp_max }`);
                 console.log();
             break;
         };
