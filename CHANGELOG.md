@@ -1,3 +1,9 @@
+### 0.2.0 (2022-05-12)
+
+##### Bug Fixes
+
+* Se agrega Useful links en README para el OPENWEATHER_TOKEN ([79d614bb](https://github.com/maurodviveros/course_NodeJS/commit/79d614bb3ab2a29632c2f1c789b63e857fae5850))
+
 #### 0.1.3 (2022-05-12)
 
 ##### New Features
