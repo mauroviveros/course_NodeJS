@@ -32,8 +32,11 @@ app.get('/elements', (req, res)=>{
     });
 });
 
-app.get("*", (req, res)=>{
-    res.sendFile(path.join(__dirname, "public/404.html"));
+app.get("/react/*", (req, res)=>{
+    res.sendFile(path.join(__dirname, "public/react/index.html"));
+});
+app.get("/angular/*", (req, res)=>{
+    res.sendFile(path.join(__dirname, "public/angular/index.html"));
 });
 
 
