@@ -10,14 +10,23 @@ app.set("view engine", "hbs");
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res)=>{
-    res.render("home");
+    res.render("home", {
+        name: "Mauro Viveros",
+        title: "Curso NodeJS"
+    });
 });
 
 app.get('/generic', (req, res)=>{
-    res.sendFile(path.join(__dirname, "public/generic.html"));
+    res.render("home", {
+        name: "Mauro Viveros",
+        title: "Curso NodeJS"
+    });
 });
 app.get('/elements', (req, res)=>{
-    res.sendFile(path.join(__dirname, "public/elements.html"));
+    res.render("home", {
+        name: "Mauro Viveros",
+        title: "Curso NodeJS"
+    });
 });
 
 app.get("*", (req, res)=>{
