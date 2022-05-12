@@ -1,9 +1,10 @@
 "use strict";
+require("dotenv").config();
 const path      = require('path');
 const hbs       = require('hbs');
 const express   = require('express');
 const app   = express();
-const PORT  = 8080;
+const PORT  = process.env.PORT;
 
 
 hbs.registerPartials(__dirname + '/views/partials', function (err) {});
