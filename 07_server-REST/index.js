@@ -1,13 +1,6 @@
 "use strict";
 require("dotenv").config({ path: `${__dirname}/.env` });
-const express = require("express");
-const APP = express();
-const PORT  = process.env.PORT;
+const Server = require("./models/express");
+const SERVER = new Server();
 
-APP.get("/", (req, res)=>{
-    res.send("Hello World");
-});
-
-APP.listen(PORT, ()=>{
-    console.log(`http://localhost:${PORT}`);
-})
+SERVER.listen();
