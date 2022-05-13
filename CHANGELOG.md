@@ -1,3 +1,9 @@
+#### 0.3.2 (2022-05-13)
+
+##### Bug Fixes
+
+* Se cambia el nombre del Repo 06 ([08434e9d](https://github.com/maurodviveros/course_NodeJS/commit/08434e9d05bdaec00f4c4cadcd4451e330349a69))
+
 #### 0.3.1 (2022-05-13)
 
 ##### New Features
