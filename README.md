@@ -11,7 +11,6 @@
   ```
   MAPBOX_TOKEN = <mapbox_token>
   OPENWEATHER_TOKEN = <openweather_token>
-  PORT = <webserver-PORT>
   ```
   > ## Useful links
   > [MAPBOX_TOKEN](https://account.mapbox.com/access-tokens/)
