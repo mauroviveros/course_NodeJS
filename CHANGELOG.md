@@ -1,3 +1,15 @@
+#### 0.3.1 (2022-05-13)
+
+##### New Features
+
+* 100. Iniciando el proyecto - RESTServer ([156da66b](https://github.com/maurodviveros/course_NodeJS/commit/156da66bf324c4e59f2d39629f3d2882670852a1))
+
+##### Bug Fixes
+
+* Se cambia el nombre del Repo 06 ([df964936](https://github.com/maurodviveros/course_NodeJS/commit/df964936f1b9c4078c298883e60f3db858596ad7))
+* Se actualiza el path del dotenv 06 ([efeb18d5](https://github.com/maurodviveros/course_NodeJS/commit/efeb18d52a807150f82c0eb5fc07938f4889d40a))
+* actualizando README ([a2ad76e0](https://github.com/maurodviveros/course_NodeJS/commit/a2ad76e0ea1ecd537311e580b1973776673c3f2b))
+
 ### 0.3.0 (2022-05-12)
 
 ##### New Features
