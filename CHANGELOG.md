@@ -1,3 +1,10 @@
+#### 0.3.3 (2022-05-13)
+
+##### New Features
+
+* 102. Peticiones HTTP - GET - PUT - POST - DELETE ([bb4c2aad](https://github.com/maurodviveros/course_NodeJS/commit/bb4c2aad92fc5293eb4743b20941dc57ebcf43da))
+* 101. Express basado en clases ([1f7c0a1b](https://github.com/maurodviveros/course_NodeJS/commit/1f7c0a1b485b0f9af70c16c620614070dbee54e0))
+
 #### 0.3.2 (2022-05-13)
 
 ##### Bug Fixes
