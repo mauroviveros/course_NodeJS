@@ -2,11 +2,25 @@
 const User = require("../models/user.model");
 const bcrypt = require("bcryptjs");
 
-const usersGet = (req, res)=>{
-    const default_query = { limit:"10", page: "1" };
-    const query = Object.assign({}, default_query, req.query);
+const usersGet = async (req, res)=>{
+    let filter = {};
+    let { limit, page, onlyAdmin } = Object.assign({}, {
+        limit:"5",
+        page: "1"
+    }, req.query);
 
-    res.json({ msg: "get API", query });
+    onlyAdmin = Boolean(onlyAdmin);
+    limit = Number(limit) > 0 ? Number(limit) : 0;
+    page = Number(page) > 0 ? (Number(page) - 1) * limit : 0;
+
+    if(onlyAdmin) filter.role = "ADMIN_ROLE"
+
+    const query = User.find(filter);
+    query.sort("email");
+    query.limit(limit);
+    query.skip(page);
+    const users = await query.exec();
+    res.json({ data: users })
 };
 
 const usersPost = async (req, res)=>{
