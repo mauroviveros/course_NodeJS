@@ -1,5 +1,7 @@
 "use strict";
 
+const User = require("../models/user.model");
+
 const usersGet = (req, res)=>{
     const default_query = { limit:"10", page: "1" };
     const query = Object.assign({}, default_query, req.query);
@@ -7,10 +9,16 @@ const usersGet = (req, res)=>{
     res.json({ msg: "get API", query });
 };
 
-const usersPost = (req, res)=>{
+const usersPost = async (req, res)=>{
     const body = req.body;
-
-    res.status(201).json({ msg: "post API", body });
+    const user = new User(body);
+    try{
+        await user.save();
+        res.json({ data: user });
+    } catch(e){
+        console.log(e);
+        res.status(400).json({ error: e });
+    };
 };
 
 const usersPut = (req, res)=>{
