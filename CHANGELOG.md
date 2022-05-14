@@ -1,3 +1,20 @@
+### 0.4.0 (2022-05-14)
+
+##### New Features
+
+* 108. Parámetros de segmento y query ([5426b3f9](https://github.com/maurodviveros/course_NodeJS/commit/5426b3f92013c1153a29ccb58f248beae9498646))
+* 107. Obtener datos de un POST ([f0a4eeec](https://github.com/maurodviveros/course_NodeJS/commit/f0a4eeec352de44acff60deaf78071ef89b59f6f))
+* 106. Separar las rutas y el controlador de la clase ([fd9f84d7](https://github.com/maurodviveros/course_NodeJS/commit/fd9f84d769ef6a74ea6225e1441af2dd7d112863))
+* 105. CORS - Middleware ([05566eda](https://github.com/maurodviveros/course_NodeJS/commit/05566edab5f263e864f22b5fac88c9de86e6230b))
+* 104. Usando códigos de respuesta HTTP en Express ([4e8b62a7](https://github.com/maurodviveros/course_NodeJS/commit/4e8b62a7c79efc37de075e30428df093ba560ae0))
+
+##### Bug Fixes
+
+* Se remueve heroku ([1fb41b0f](https://github.com/maurodviveros/course_NodeJS/commit/1fb41b0fcbb107eb6e11839a53d2cb8e9e264fca))
+* Se agrega Express ([8733f8fb](https://github.com/maurodviveros/course_NodeJS/commit/8733f8fb0f8a93c4a8fe3ad616d13b95f4ec1065))
+* Se agrega CORS ([7f42bfd8](https://github.com/maurodviveros/course_NodeJS/commit/7f42bfd8f3cd807d975bdf4016cbaa63d39b529f))
+* better package.json ([bcafb03b](https://github.com/maurodviveros/course_NodeJS/commit/bcafb03b1394f4966320885a4599d00d76695386))
+
 #### 0.3.5 (2022-05-14)
 
 ##### Bug Fixes
