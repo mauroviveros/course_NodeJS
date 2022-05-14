@@ -20,9 +20,6 @@
         "url": "https://github.com/maurodviveros/course_NodeJS/issues"
     },
     "homepage": "https://github.com/maurodviveros/course_NodeJS#readme",
-    "engines": {
-        "node": "=16.15.0"
-    },
     "dependencies": {
         "axios": "0.27.2",
         "colors": "1.4.0",
