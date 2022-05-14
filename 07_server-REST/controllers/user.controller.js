@@ -12,10 +12,8 @@ const usersGet = (req, res)=>{
 const usersPost = async (req, res)=>{
     const body = req.body;
     const user = new User(body);
-    
-    user.google = false;
 
-    // if(user.email && await User.findOne({ email: user.email })) return res.status(400).json({ msg: "ya existe ese email" });
+    user.google = false;
     if(user.password) user.password = await bcrypt.hashSync(user.password);
 
     try{
