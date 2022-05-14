@@ -1,3 +1,28 @@
+### 0.5.0 (2022-05-14)
+
+##### New Features
+
+* 130. Retornar número total de registros en una colección ([e55bb075](https://github.com/maurodviveros/course_NodeJS/commit/e55bb075977364f5387309c7803fd98dd099249b))
+* 126. Tarea - Custom validation - EmailExiste ([416833fe](https://github.com/maurodviveros/course_NodeJS/commit/416833fe30e0578a2a12add14d50dc8bf0c9f19e))
+* 125. Centralizar la validación del rol ([bbfd323c](https://github.com/maurodviveros/course_NodeJS/commit/bbfd323c6fa514742852d5993606c2fcc1905d30))
+* 122. Validar campos obligatorios - Email ([25cc4b59](https://github.com/maurodviveros/course_NodeJS/commit/25cc4b5919c8091fead9f02a55dc3d8f5292bd71))
+* 121. BcryptJS - Encriptando la contraseña ([1e693e46](https://github.com/maurodviveros/course_NodeJS/commit/1e693e46fccce2bf1cb898d43785eba29141ad8d))
+* 119. Modelo de Usuario ([f0638dc3](https://github.com/maurodviveros/course_NodeJS/commit/f0638dc3163b5c9770436555c7cd1f91f4860c17))
+* 118. Mongoose - Conectarnos a la base de datos ([bcb7099f](https://github.com/maurodviveros/course_NodeJS/commit/bcb7099fba4130d116dfca2abd602fa9e894b0f2))
+* 115. Alcances del proyecto - RESTServer ([049a0f63](https://github.com/maurodviveros/course_NodeJS/commit/049a0f63f31a72fe6e1e9733f81f149c1c85e8de))
+
+##### Bug Fixes
+
+* Se agrega bcryptjs ([36547eb4](https://github.com/maurodviveros/course_NodeJS/commit/36547eb41b39a42332f2e1cc8d450a08f76c7775))
+* Se agrega mongoose ([0988d9f8](https://github.com/maurodviveros/course_NodeJS/commit/0988d9f84679b6bdf1004f5a56b136c7a2d0c66d))
+
+##### Other Changes
+
+*  Borrando un usuario de la base de datos ([bace3b8a](https://github.com/maurodviveros/course_NodeJS/commit/bace3b8aa5b19ab5c3c4cbc26047665bfeef6ece))
+*  Obtener todos los usuarios de forma paginada ([36c342f0](https://github.com/maurodviveros/course_NodeJS/commit/36c342f0fae8b2820d1e77ab079fb009cfc8c7ba))
+*  Actualizar información del usuario ([39b6e39c](https://github.com/maurodviveros/course_NodeJS/commit/39b6e39c02daea7d9d789dc794ed9aa8ce302a05))
+*  Creando un usuario en la colección ([761d0d5b](https://github.com/maurodviveros/course_NodeJS/commit/761d0d5b4338520553da4b278f7f1c7d8bd1c0ac))
+
 ### 0.4.0 (2022-05-14)
 
 ##### New Features
