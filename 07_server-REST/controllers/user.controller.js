@@ -1,16 +1,22 @@
 "use strict";
 
 const usersGet = (req, res)=>{
-    res.json({ msg: "get API" });
+    const default_query = { limit:"10", page: "1" };
+    const query = Object.assign({}, default_query, req.query);
+
+    res.json({ msg: "get API", query });
 };
 
 const usersPost = (req, res)=>{
-    const { name, age } = req.body;
-    res.status(201).json({ msg: "post API", name, age });
+    const body = req.body;
+
+    res.status(201).json({ msg: "post API", body });
 };
 
 const usersPut = (req, res)=>{
-    res.status(400).json({ msg: "put API" });
+    const params = req.params;
+
+    res.status(400).json({ msg: "put API", params });
 };
 
 const usersDelete = (req, res)=>{
