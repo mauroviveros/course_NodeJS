@@ -1,6 +1,6 @@
 "use strict";
-
 const User = require("../models/user.model");
+const bcrypt = require("bcryptjs");
 
 const usersGet = (req, res)=>{
     const default_query = { limit:"10", page: "1" };
@@ -12,7 +12,11 @@ const usersGet = (req, res)=>{
 const usersPost = async (req, res)=>{
     const body = req.body;
     const user = new User(body);
+    user.google = false;
+
     try{
+        if(user.password) user.password = await bcrypt.hashSync(user.password);
+
         await user.save();
         res.json({ data: user });
     } catch(e){
