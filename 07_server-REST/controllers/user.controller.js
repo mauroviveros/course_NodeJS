@@ -63,8 +63,16 @@ const usersPut = async (req, res)=>{
     };
 };
 
-const usersDelete = (req, res)=>{
-    res.status(500).json({ msg: "delete API" });
+const usersDelete = async (req, res)=>{
+    const params = req.params;
+
+    try{
+        const user = await User.findByIdAndUpdate(params.id, { estado: false });
+        return res.json({ data: user });
+    } catch(error){
+        console.log(error);
+        return res.status(400).json({ message: error.message });
+    };
 };
 
 module.exports = {
