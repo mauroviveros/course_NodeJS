@@ -3,7 +3,8 @@ const User = require("../models/user.model");
 const bcrypt = require("bcryptjs");
 
 const usersGet = async (req, res)=>{
-    let filter = {};
+    let filter = { estado: true };
+    let filterFind = {};
     let { limit, page, onlyAdmin } = Object.assign({}, {
         limit:"5",
         page: "1"
@@ -13,14 +14,22 @@ const usersGet = async (req, res)=>{
     limit = Number(limit) > 0 ? Number(limit) : 0;
     page = Number(page) > 0 ? (Number(page) - 1) * limit : 0;
 
-    if(onlyAdmin) filter.role = "ADMIN_ROLE"
+    if(onlyAdmin) filterFind.role = "ADMIN_ROLE"
 
-    const query = User.find(filter);
+    const query = User.find(Object.assign({}, filter, filterFind));
     query.sort("email");
     query.limit(limit);
     query.skip(page);
-    const users = await query.exec();
-    res.json({ data: users })
+
+    try{
+        const total = await User.count(filter);
+        const users = await query.exec();
+        return res.json({ total, data: users });
+    } catch(error){
+        console.log(error);
+        return res.status(400).json({ message: error.message });
+    };
+    
 };
 
 const usersPost = async (req, res)=>{
