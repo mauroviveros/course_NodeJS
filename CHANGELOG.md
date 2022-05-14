@@ -1,3 +1,9 @@
+#### 0.3.4 (2022-05-14)
+
+##### Bug Fixes
+
+* add .vscode ([5bfb1f38](https://github.com/maurodviveros/course_NodeJS/commit/5bfb1f3830bd8b66fee84f6c5a41b000ab779ab9))
+
 #### 0.3.3 (2022-05-13)
 
 ##### New Features
