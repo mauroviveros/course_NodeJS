@@ -1,6 +1,7 @@
 "use strict";
 const express = require("express");
 const path = require("path");
+const cors = require("cors");
 
 class Server{
     constructor(){
@@ -12,6 +13,7 @@ class Server{
     };
 
     middlewares(){
+        this.app.use(cors());
         this.app.use(express.static(path.join(__dirname, '../public')));
     };
 
