@@ -25,10 +25,19 @@ const usersPost = async (req, res)=>{
     };
 };
 
-const usersPut = (req, res)=>{
+const usersPut = async (req, res)=>{
     const params = req.params;
+    const { google, ...body } = req.body;
 
-    res.status(400).json({ msg: "put API", params });
+    if(body.password) body.password = await bcrypt.hashSync(body.password);
+
+    try{
+        const user = await User.findByIdAndUpdate(params.id, body);
+        return res.json({ data: user });
+    } catch(error){
+        console.log(error);
+        return res.status(400).json({ message: error.message });
+    };
 };
 
 const usersDelete = (req, res)=>{
