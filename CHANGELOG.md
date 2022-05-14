@@ -1,3 +1,9 @@
+#### 0.3.5 (2022-05-14)
+
+##### Bug Fixes
+
+* better package.json ([53c8bb44](https://github.com/maurodviveros/course_NodeJS/commit/53c8bb44c6ab3971eb9939516cfa0e0df424f3b3))
+
 #### 0.3.4 (2022-05-14)
 
 ##### Bug Fixes
