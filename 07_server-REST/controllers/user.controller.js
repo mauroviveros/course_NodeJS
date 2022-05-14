@@ -12,16 +12,18 @@ const usersGet = (req, res)=>{
 const usersPost = async (req, res)=>{
     const body = req.body;
     const user = new User(body);
+    
     user.google = false;
 
-    try{
-        if(user.password) user.password = await bcrypt.hashSync(user.password);
+    // if(user.email && await User.findOne({ email: user.email })) return res.status(400).json({ msg: "ya existe ese email" });
+    if(user.password) user.password = await bcrypt.hashSync(user.password);
 
+    try{
         await user.save();
-        res.json({ data: user });
-    } catch(e){
-        console.log(e);
-        res.status(400).json({ error: e });
+        return res.json({ data: user });
+    } catch(error){
+        console.log(error);
+        return res.status(400).json({ message: error.message });
     };
 };
 
