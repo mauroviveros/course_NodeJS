@@ -3,6 +3,8 @@
 const User = require("../models/user.model");
 const bcrypt = require("bcryptjs");
 
+const { generarJWT } = require("../helpers/jwt");
+
 const login = async (req, res)=>{
     const body = req.body;
     try{
@@ -10,11 +12,13 @@ const login = async (req, res)=>{
         const valid = await bcrypt.compareSync(body.password, user.password);
         if(!valid) throw new Error("invalid credentials");
 
-        // 4 Generar JWT
+        const token = await generarJWT(user._id);
 
 
         return res.json({
-            message: "OK"
+            message: "OK",
+            user,
+            token
         });
     } catch(error){
         console.log(error);
