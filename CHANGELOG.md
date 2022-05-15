@@ -1,3 +1,19 @@
+### 0.6.0 (2022-05-15)
+
+##### New Features
+
+* 145. Obtener la información del usuario autenticado ([83e7a06e](https://github.com/maurodviveros/course_NodeJS/commit/83e7a06e4a57069dd416a9f16f725d0ca81b1854))
+* 144. Proteger rutas mediante uso de Token - Middlewares ([e7582890](https://github.com/maurodviveros/course_NodeJS/commit/e7582890c33e71c004538b8235bf006501168ceb))
+* 142. Generar un JWT ([87b4e497](https://github.com/maurodviveros/course_NodeJS/commit/87b4e49758c2fa38f9e620667ab97416bc92409b))
+* 141. Login de usuario ([0915a489](https://github.com/maurodviveros/course_NodeJS/commit/0915a4896b49831b6339dbfd4bc3332fe09e8696))
+* 140. Crear ruta autenticación - Auth - Login ([b9e6406e](https://github.com/maurodviveros/course_NodeJS/commit/b9e6406ef7c501e42777b2e5240bde1454b39a5c))
+
+##### Other Changes
+
+*  Tiene rol ([abb124f7](https://github.com/maurodviveros/course_NodeJS/commit/abb124f7b1ff6c8de73eb9da1a2b64b4c10a0dba))
+*  Verificar Rol de administrador ([23bfac07](https://github.com/maurodviveros/course_NodeJS/commit/23bfac07eb14ea7a765737d1905e9bbd789582fd))
+* Se agrega JWT ([b3df59d2](https://github.com/maurodviveros/course_NodeJS/commit/b3df59d215be1bfa257a16aef9beb2feb7a58ff1))
+
 ### 0.5.0 (2022-05-14)
 
 ##### New Features
