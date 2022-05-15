@@ -1,14 +1,17 @@
 "use strict";
 
 const JWT = require("jsonwebtoken");
+const User = require("../models/user.model");
 
-module.exports.validarJWT = (req, res, next)=>{
+module.exports.validarJWT = async (req, res, next)=>{
     const token = req.header("Authorization");
     
     try{
         const { _id } = JWT.verify(token, process.env.JWT_SECRET_KEY);
-        req.uid = _id;
+        const user = await User.findOne({ _id, estado: true });
+        if(!user) throw new Error("Access denied");
 
+        req.user = JSON.parse(JSON.stringify(user));
         next();
     } catch(error){
         console.log(error);
