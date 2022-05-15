@@ -30,7 +30,20 @@ const roleADMIN = async (req, res, next)=>{
     };
 };
 
+const hasRole = (...roles)=>{
+    return (req, res, next)=>{
+        try{
+            if(!roles.includes(req.user.role)) throw new Error("Access denied");
+            next();
+        } catch(error){
+            console.log(error);
+            return res.status(403).json({ message: error.message });
+        };
+    };
+};
+
 module.exports = {
     validarJWT,
-    roleADMIN
-}
+    roleADMIN,
+    hasRole
+};
