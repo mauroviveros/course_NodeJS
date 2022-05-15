@@ -2,7 +2,7 @@
 require("dotenv").config();
 const JWT = require("jsonwebtoken");
 
-module.exports.generarJWT = (uuid)=>{
+const generarJWT = (uuid)=>{
     return new Promise((resolve, reject)=>{
         const payload = { _id: uuid };
 
@@ -13,4 +13,8 @@ module.exports.generarJWT = (uuid)=>{
             else resolve(token);
         });
     });
+};
+
+module.exports = {
+    generarJWT
 };

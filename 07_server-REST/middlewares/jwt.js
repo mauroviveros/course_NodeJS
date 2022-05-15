@@ -3,7 +3,7 @@
 const JWT = require("jsonwebtoken");
 const User = require("../models/user.model");
 
-module.exports.validarJWT = async (req, res, next)=>{
+const validarJWT = async (req, res, next)=>{
     const token = req.header("Authorization");
     
     try{
@@ -18,3 +18,19 @@ module.exports.validarJWT = async (req, res, next)=>{
         return res.status(403).json({ message: error.message });
     };
 };
+
+const roleADMIN = async (req, res, next)=>{
+    try{
+        if(!req.user || req.user.role != "ADMIN_ROLE") throw new Error("Access denied");
+
+        next();
+    } catch(error){
+        console.log(error);
+        return res.status(403).json({ message: error.message });
+    };
+};
+
+module.exports = {
+    validarJWT,
+    roleADMIN
+}
