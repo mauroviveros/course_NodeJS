@@ -11,6 +11,10 @@
   ```
   MAPBOX_TOKEN = <mapbox_token>
   OPENWEATHER_TOKEN = <openweather_token>
+  MONGODB_URI = <server MongoDB>
+  JWT_SECRET_KEY = <unique secret key jwt>
+  GOOGLE_CLIENT_ID = <Public key Google SignIn>
+  GOOGLE_SECRET_ID = <Private key Google SignIn>
   ```
   > ## Useful links
   > [MAPBOX_TOKEN](https://account.mapbox.com/access-tokens/)
