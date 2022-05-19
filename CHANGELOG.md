@@ -1,3 +1,16 @@
+### 0.8.0 (2022-05-19)
+
+##### New Features
+
+* 173. Resolución de la tarea - CRUD y Rutas de Productos ([5b46cf18](https://github.com/maurodviveros/course_NodeJS/commit/5b46cf180de0b952b9055901b1efc4159f9d4ebd))
+* 172. Modelo de producto y rutas ([cd6847e8](https://github.com/maurodviveros/course_NodeJS/commit/cd6847e81af06d039eda06860a7cc9a93edf54e9))
+* 171. Resolución de la tarea - Crud categorías - Parte 2 ([9f30dd35](https://github.com/maurodviveros/course_NodeJS/commit/9f30dd35c00f243baeefac9170d24089835f3fae))
+* 170. Resolución de la tarea - Crud categorías ([06a68b49](https://github.com/maurodviveros/course_NodeJS/commit/06a68b49226f56c436091c83eb32421fe801e730))
+* 169. Tarea - CRUD de Categorías ([1392f5de](https://github.com/maurodviveros/course_NodeJS/commit/1392f5de7372c37888b0917acd53134f083bb341))
+* 168. Crear una categoria ([1eeffc5c](https://github.com/maurodviveros/course_NodeJS/commit/1eeffc5ced41f08fd8cba2ffaf82cd75464410a8))
+* 167. Modelo Categoria ([cd886518](https://github.com/maurodviveros/course_NodeJS/commit/cd8865188fd9a492388e67bc0a11db24e954c70a))
+* 166. CRUD y rutas de Categorías ([c1a5bf7b](https://github.com/maurodviveros/course_NodeJS/commit/c1a5bf7bb632a5f1bef3efd8ac95bbed992a29d8))
+
 ### 0.7.0 (2022-05-19)
 
 ##### New Features
