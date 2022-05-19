@@ -3,7 +3,6 @@ const User = require("../models/user.model");
 const bcrypt = require("bcryptjs");
 
 const usersGet = async (req, res)=>{
-    console.log(req.user);
     let filter = { estado: true };
     let filterFind = {};
     let { limit, page, onlyAdmin } = Object.assign({}, {
@@ -66,7 +65,6 @@ const usersPut = async (req, res)=>{
 
 const usersDelete = async (req, res)=>{
     const params = req.params;
-    console.log(req.user);
 
     try{
         const user = await User.findByIdAndUpdate(params.id, { estado: false });
