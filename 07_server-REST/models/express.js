@@ -7,7 +7,7 @@ const { dbConnection } = require("../database/database.config");
 
 const userRoutes        = require("../routes/user.routes");
 const authRoutes        = require("../routes/auth.routes");
-const categoriasRoutes  = require("../routes/categorias.routes")
+const categoriasRoutes  = require("../routes/category.routes")
 
 class Server{
     constructor(){

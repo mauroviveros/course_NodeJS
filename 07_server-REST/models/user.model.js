@@ -5,7 +5,7 @@ const { Schema, model } = require("mongoose");
 const UserSchema = Schema({
     name: {
         type: String,
-        required: true,
+        required: true
     },
     email: {
         type: String,
@@ -15,7 +15,7 @@ const UserSchema = Schema({
     },
     password: {
         type: String,
-        required: true,
+        required: true
     },
     img: {
         type: String
@@ -28,6 +28,7 @@ const UserSchema = Schema({
     },
     estado: {
         type: Boolean,
+        required: true,
         default: true
     },
     google: {
