@@ -6,21 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Identity - SignIn</title>
     <script src="https://accounts.google.com/gsi/client" async defer></script>
-    <script>
-        function handleCredentialResponse(response) {
-            const body = { google_token: response.credential };
-
-            fetch("http://localhost:8081/api/auth/login/google", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(body)
-            }).then(resp => resp.json())
-            .then(resp => { console.log(resp) })
-            .catch(console.warn);
-        };
-    </script>
 </head>
 <body>
 
@@ -36,8 +21,34 @@
          data-text="sign_in_with"
          data-shape="rectangular"
          data-logo_alignment="left">
-      </div>
+    </div>
 
+    <button id="google_signout">SighOut</button>
 
+    <script>
+        function handleCredentialResponse(response) {
+            const body = { google_token: response.credential };
+
+            fetch("http://localhost:8081/api/auth/login/google", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(body)
+            }).then(resp => resp.json())
+            .then(resp => {
+                console.log(resp);
+                localStorage.setItem("email", resp.user.email);
+            }).catch(console.warn);
+        };
+        const button = document.getElementById("google_signout");
+        button.onclick = ()=>{
+            google.accounts.id.disableAutoSelect();
+            google.accounts.id.revoke(localStorage.getItem("email"), done=>{
+                localStorage.clear();
+                location.reload();
+            })
+        };
+    </script>
 </body>
 </html>
