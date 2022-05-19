@@ -1,3 +1,13 @@
+### 0.7.0 (2022-05-19)
+
+##### New Features
+
+* 159. Logout - Google Identity ([37af0ca7](https://github.com/maurodviveros/course_NodeJS/commit/37af0ca7f7ab06f3d5173d5b4d3d2520108d0afc))
+* 157. Validar Token de Google - Backend ([3790a868](https://github.com/maurodviveros/course_NodeJS/commit/3790a8681551dbbf404b3e938278f3fe5669f625))
+* 157. Validar Token de Google - Backend ([c3d4e91d](https://github.com/maurodviveros/course_NodeJS/commit/c3d4e91d214b1938cbfc7952ab0434dd33165c53))
+* 156. Ruta para manejar autenticación de Google ([4a6894bd](https://github.com/maurodviveros/course_NodeJS/commit/4a6894bd9a533eacebdabe61edda6f0c409c0edc))
+* 155. Usuario de Google - Frontend ([abb51e82](https://github.com/maurodviveros/course_NodeJS/commit/abb51e82ecf5952faae7ae2a4fa716d3ec0e0443))
+
 ### 0.6.0 (2022-05-15)
 
 ##### New Features
