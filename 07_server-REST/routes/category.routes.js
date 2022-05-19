@@ -8,8 +8,8 @@ const { validarJWT } = require("../middlewares/jwt");
 
 router.get("/", categoryCtrl.getCategories);
 router.get("/:_id", categoryCtrl.getCategory);
-router.post("/", [validarJWT], categoryCtrl.createCategory);
-router.put("/:_id", [validarJWT], categoryCtrl.updateCategory);
-router.delete("/:_id", [validarJWT], categoryCtrl.deleteCategory);
+router.post("/", [validarJWT, hasRole("ADMIN_ROLE", "VENTAS_ROLE")], categoryCtrl.createCategory);
+router.put("/:_id", [validarJWT, hasRole("ADMIN_ROLE", "VENTAS_ROLE")], categoryCtrl.updateCategory);
+router.delete("/:_id", [validarJWT, hasRole("ADMIN_ROLE")], categoryCtrl.deleteCategory);
 
 module.exports = router;

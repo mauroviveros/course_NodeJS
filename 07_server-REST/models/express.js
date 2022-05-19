@@ -7,7 +7,8 @@ const { dbConnection } = require("../database/database.config");
 
 const userRoutes        = require("../routes/user.routes");
 const authRoutes        = require("../routes/auth.routes");
-const categoriasRoutes  = require("../routes/category.routes")
+const categoriesRoutes  = require("../routes/category.routes");
+const productsRoutes    = require("../routes/products.routes");
 
 class Server{
     constructor(){
@@ -32,7 +33,8 @@ class Server{
     routes(){
         this.app.use("/api/users", userRoutes);
         this.app.use("/api/auth", authRoutes);
-        this.app.use("/api/categorias", categoriasRoutes);
+        this.app.use("/api/categories", categoriesRoutes);
+        this.app.use("/api/products", productsRoutes);
     };
 
     listen(){

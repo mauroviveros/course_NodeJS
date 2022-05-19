@@ -1,10 +1,6 @@
 "use strict";
 const Category = require("../models/category.model");
 
-// Listar Categorias - paginado, total, populate(userID)
-// Mostrar Categoria - populate(userID)
-// Actualizar Categoria - new userID
-// borrar Categoria - estado = false
 const getCategories = async (req, res)=>{
     let filter = { estado: true };
     let { limit, page } = Object.assign({}, {
