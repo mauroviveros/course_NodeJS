@@ -55,7 +55,7 @@ const usersPut = async (req, res)=>{
     if(body.password) body.password = await bcrypt.hashSync(body.password);
 
     try{
-        const user = await User.findByIdAndUpdate(params.id, body);
+        const user = await User.findByIdAndUpdate(params._id, body);
         return res.json({ data: user });
     } catch(error){
         console.log(error);
@@ -67,7 +67,7 @@ const usersDelete = async (req, res)=>{
     const params = req.params;
 
     try{
-        const user = await User.findByIdAndUpdate(params.id, { estado: false });
+        const user = await User.findByIdAndUpdate(params._id, { estado: false });
         return res.json({ data: user });
     } catch(error){
         console.log(error);

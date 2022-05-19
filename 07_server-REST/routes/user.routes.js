@@ -8,7 +8,7 @@ const { validarJWT, hasRole } = require("../middlewares/jwt");
 
 router.get("/", userCtrl.usersGet);
 router.post("/", userCtrl.usersPost);
-router.put("/:id", userCtrl.usersPut);
-router.delete("/:id", [validarJWT, hasRole("ADMIN_ROLE", "VENTAS_ROLE")], userCtrl.usersDelete);
+router.put("/:_id", userCtrl.usersPut);
+router.delete("/:_id", [validarJWT, hasRole("ADMIN_ROLE", "VENTAS_ROLE")], userCtrl.usersDelete);
 
 module.exports = router;
