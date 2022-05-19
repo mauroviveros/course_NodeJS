@@ -4,7 +4,7 @@ const { Router } = require("express");
 const router = Router();
 
 const categoryCtrl = require("../controllers/category.controller");
-const { validarJWT } = require("../middlewares/jwt");
+const { validarJWT, hasRole } = require("../middlewares/jwt");
 
 router.get("/", categoryCtrl.getCategories);
 router.get("/:_id", categoryCtrl.getCategory);
