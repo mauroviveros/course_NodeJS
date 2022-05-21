@@ -64,12 +64,16 @@ const deleteFile = (filename, collection)=>{
             };
         } else resolve(false);
     });
-}
+};
+const getPath = (filename, collection)=>{
+    return path.join(__dirname, "../uploads/", collection, filename);
+};
 
 module.exports = {
     uploadFile,
     validateFile,
     getCollection,
     existFile,
-    deleteFile
+    deleteFile,
+    getPath
 };
