@@ -30,7 +30,12 @@ class Server{
         this.app.use(cors());
         this.app.use(express.json());
         this.app.use(express.static(path.join(__dirname, '../public')));
-        this.app.use(fileUpload({ limits: { fileSize: 50 * 1024 * 1024 }, useTempFiles : true, tempFileDir : '/tmp/', createParentPath: true }));
+        this.app.use(fileUpload({
+            limits: { fileSize: 50 * 1024 * 1024 },
+            useTempFiles: true,
+            createParentPath: true,
+            tempFileDir: '/tmp/'
+        }));
     };
 
     routes(){
