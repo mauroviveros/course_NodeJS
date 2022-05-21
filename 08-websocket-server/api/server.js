@@ -2,15 +2,17 @@
 
 const express   = require("express");
 const cors      = require("cors");
+const http      = require("http");
 const path      = require("path");
-
+const socketio  = require("socket.io");
 class Server{
     constructor(){
-        this.app = express();
-        this.PORT = process.env.PORT;
+        this.PORT   = process.env.PORT;
+        this.app    = express();
+        this.server = http.createServer(this.app);
+        this.io     = socketio(this.server);
 
         this.middlewares();
-        this.routes();
     };
 
     middlewares(){
@@ -19,10 +21,8 @@ class Server{
         this.app.use(express.static(path.join(__dirname, '../public')));
     };
 
-    routes(){};
-
     listen(){
-        this.app.listen(this.PORT, ()=>{
+        this.server.listen(this.PORT, ()=>{
             console.log(`http://localhost:${this.PORT}`);
         });
     };
