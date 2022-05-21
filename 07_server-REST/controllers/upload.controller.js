@@ -30,7 +30,7 @@ const getImg = async(req, res)=>{
     try{
         const Model = await getCollection(collection);
         const document_model = await Model.findById(_id);
-        if(!document_model || !document_model.img) return res.json({ message: "No tiene imagen" });
+        if(!document_model || !document_model.img) return res.sendFile(getPath("no-image.jpg", "../assets"));
         else return res.sendFile(getPath(document_model.img, collection));
     }catch(error){
         console.log(error);
