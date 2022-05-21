@@ -13,12 +13,22 @@ class Server{
         this.io     = socketio(this.server);
 
         this.middlewares();
+        this.sockets();
     };
 
     middlewares(){
         this.app.use(cors());
         this.app.use(express.json());
         this.app.use(express.static(path.join(__dirname, '../public')));
+    };
+
+    sockets(){
+        this.io.on("connection", (socket)=>{
+            console.log(`cliente conectado ${socket.id}`);
+            socket.on("disconnect", ()=>{
+                console.log(`cliente desconectado ${socket.id}`);
+            });
+        });
     };
 
     listen(){
