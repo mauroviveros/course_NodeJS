@@ -9,6 +9,7 @@ const userRoutes        = require("../routes/user.routes");
 const authRoutes        = require("../routes/auth.routes");
 const categoryRoutes  = require("../routes/category.routes");
 const productRoutes    = require("../routes/product.routes");
+const uploadRoutes    = require("../routes/upload.routes");
 
 class Server{
     constructor(){
@@ -35,6 +36,7 @@ class Server{
         this.app.use("/api/auth", authRoutes);
         this.app.use("/api/categories", categoryRoutes);
         this.app.use("/api/products", productRoutes);
+        this.app.use("/api/uploads", uploadRoutes);
     };
 
     listen(){
