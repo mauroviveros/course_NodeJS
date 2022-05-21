@@ -1,3 +1,22 @@
+### 0.9.0 (2022-05-21)
+
+##### New Features
+
+* 193. Mostrar imagen de relleno} ([738acc5b](https://github.com/maurodviveros/course_NodeJS/commit/738acc5b5248da0e41e853746579d6a32a467554))
+* 192. Servicio para mostrar las imágenes ([de61dbdc](https://github.com/maurodviveros/course_NodeJS/commit/de61dbdcfb18a22684ebf0f7d77b35a6a4722a48))
+* 191. Borrar archivos del servidor ([8262ceef](https://github.com/maurodviveros/course_NodeJS/commit/8262ceef3341c7ed2e8752e737717bcfe512256c))
+* 189. Actualizar imagen de usuario ([58b2c864](https://github.com/maurodviveros/course_NodeJS/commit/58b2c8648203d51a1092e512962c5db71fc6689c))
+* 188. Ruta para actualizar imágenes de Usuarios y Productos ([2f3babc3](https://github.com/maurodviveros/course_NodeJS/commit/2f3babc33b4ae017f4b7741a02b48e25d6cabbb6))
+* 187. Crear carpetas de destino ([c8556fa0](https://github.com/maurodviveros/course_NodeJS/commit/c8556fa00ee2ffc6b0d2472c477821e906d140d9))
+* 186. Helper - SubirArchivo ([c4c2cd2b](https://github.com/maurodviveros/course_NodeJS/commit/c4c2cd2b0b2d1fb0bd4a4c015bf3672a9d575203))
+* 184. Validar la extensión ([c8f30ff6](https://github.com/maurodviveros/course_NodeJS/commit/c8f30ff64af2ec8ca303514b8dd48820480d07a2))
+* 183. Subir archivos ([f62dfd72](https://github.com/maurodviveros/course_NodeJS/commit/f62dfd7255b4aa83fac733005d37c7e6aece284f))
+* 182. Continuación del proyecto - RestServer ([8f8d8401](https://github.com/maurodviveros/course_NodeJS/commit/8f8d8401d706868344769791d792b5762581c8dc))
+
+##### Bug Fixes
+
+*  generate auto parent folder path ([5db5c6d6](https://github.com/maurodviveros/course_NodeJS/commit/5db5c6d64bd074c52d7f7b6d98ea396b906ef3e6))
+
 ### 0.8.0 (2022-05-19)
 
 ##### New Features
