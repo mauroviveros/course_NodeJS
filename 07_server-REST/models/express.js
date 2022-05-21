@@ -2,6 +2,7 @@
 const express = require("express");
 const path = require("path");
 const cors = require("cors");
+const fileUpload = require("express-fileupload");
 
 const { dbConnection } = require("../database/database.config");
 
@@ -29,6 +30,7 @@ class Server{
         this.app.use(cors());
         this.app.use(express.json());
         this.app.use(express.static(path.join(__dirname, '../public')));
+        this.app.use(fileUpload({ limits: { fileSize: 50 * 1024 * 1024 }, useTempFiles : true, tempFileDir : '/tmp/' }));
     };
 
     routes(){
