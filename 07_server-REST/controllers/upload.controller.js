@@ -1,22 +1,28 @@
 "use strict";
 
-const { uploadFile, validateFile } = require("../helpers/upload");
+const { uploadFile, validateFile, getCollection } = require("../helpers/upload");
 
-// const postImg = async (req, res)=>{
-//     try{
-//         await validateFile(req.files.file, ["jpg", "png", "jpeg"]);
-//         const file_path = await uploadFile(req.files.file, "users");
+const postImg = async (req, res)=>{
+    const { id, collection } = req.params;
 
-//         res.json({ path: file_path })
-//     } catch(error){
-//         console.log(error);
-//         return res.status(500).json({ message: error.message });
-//     };
-// };
+    try{
+        const Model = await getCollection(collection);
+        const document_model = await Model.findById(id);
+        const tempImg = document_model.img;
+        if(!document_model) throw new Error("Can't save Image in: collection - MongoID");
 
-const postImg = (req, res)=>{
-    const params = req.params;
-    res.json({ id: req.params.id, collection: req.params.collection });
+        await validateFile(req.files.file, ["jpg", "png", "jpeg"]);
+        const file_path = await uploadFile(req.files.file, collection);
+        document_model.img = file_path;
+        await document_model.save();
+
+        res.json({ file: file_path })
+    }catch(error){
+        console.log(error);
+        return res.status(500).json({ message: error.message });
+    }
+
+
 };
 
 module.exports = {
