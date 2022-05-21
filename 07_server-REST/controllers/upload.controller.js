@@ -1,6 +1,6 @@
 "use strict";
 
-const { uploadFile, validateFile, getCollection } = require("../helpers/upload");
+const { uploadFile, validateFile, getCollection, deleteFile } = require("../helpers/upload");
 
 const postImg = async (req, res)=>{
     const { id, collection } = req.params;
@@ -15,14 +15,13 @@ const postImg = async (req, res)=>{
         const file_path = await uploadFile(req.files.file, collection);
         document_model.img = file_path;
         await document_model.save();
+        if(!!tempImg) await deleteFile(tempImg, collection);
 
         res.json({ file: file_path })
     }catch(error){
         console.log(error);
         return res.status(500).json({ message: error.message });
-    }
-
-
+    };
 };
 
 module.exports = {

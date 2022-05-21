@@ -1,6 +1,7 @@
 "use strict";
 
 const path = require("path");
+const fs = require("fs");
 const { v4: uuid } = require("uuid");
 
 const User = require("../models/user.model");
@@ -41,11 +42,34 @@ const getCollection = (collection)=>{
             case "products": resolve(Product); break;
             default: reject(new Error("collection not allowed"));
         };
-    })
+    });
 };
+
+const existFile = (filename, collection)=>{
+    const filepath = path.join(__dirname, "../uploads/", collection, filename);
+    return new Promise((resolve, reject)=>{
+        if(fs.existsSync(filepath)) resolve(true);
+        else resolve(false);
+    });
+};
+
+const deleteFile = (filename, collection)=>{
+    const filepath = path.join(__dirname, "../uploads/", collection, filename);
+    return new Promise((resolve, reject)=>{
+        if(fs.existsSync(filepath)){
+            try{
+                resolve(fs.unlinkSync(filepath));
+            } catch(error){
+                reject(error);
+            };
+        } else resolve(false);
+    });
+}
 
 module.exports = {
     uploadFile,
     validateFile,
-    getCollection
+    getCollection,
+    existFile,
+    deleteFile
 };
