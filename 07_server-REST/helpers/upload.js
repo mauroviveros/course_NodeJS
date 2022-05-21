@@ -17,6 +17,20 @@ const uploadFile = (file, folder = "")=>{
     });
 };
 
+const validateFile = async (file, extensions)=>{
+    return new Promise((resolve, reject)=>{
+        const regexp = new RegExp("\.(" + extensions.join("|") + ")$", "i");
+        try{
+            if(!file) throw new Error('No files were uploaded.');
+            if(!file.name.toLowerCase().match(regexp)) throw new Error("file extension not allowed");
+            resolve();
+        } catch(error){
+            reject(error);
+        };
+    });
+};
+
 module.exports = {
-    uploadFile
+    uploadFile,
+    validateFile
 };

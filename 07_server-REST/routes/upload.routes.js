@@ -4,8 +4,7 @@ const { Router } = require("express");
 const router = Router();
 
 const uploadCtrl = require("../controllers/upload.controller");
-const { validFile } = require("../middlewares/upload");
 
-router.post("/", [validFile("jpg", "png", "jpeg")], uploadCtrl.postFile);
+router.post("/:collection/:id", uploadCtrl.postImg);
 
 module.exports = router;
