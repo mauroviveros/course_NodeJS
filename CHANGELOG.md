@@ -1,3 +1,19 @@
+#### 0.10.1 (2022-05-22)
+
+##### New Features
+
+* 232. HTML y JS que usaremos ([2fe15f39](https://github.com/maurodviveros/course_NodeJS/commit/2fe15f39341d183d13dce1260aed1cee8827b2ef))
+* 231. Validar socket con JWT - Backend ([c17ce066](https://github.com/maurodviveros/course_NodeJS/commit/c17ce066b0a67416355fc9c42589f9185d31005d))
+* 230. Validar Token - Frontend ([a2aed485](https://github.com/maurodviveros/course_NodeJS/commit/a2aed485443b2d1f51f0c39b97b587be04aa605e))
+* 229. Validar el JWT - Servicio ([58bb9c1d](https://github.com/maurodviveros/course_NodeJS/commit/58bb9c1d450c52bd4672df60e6c17758bb0b2b0d))
+* 228. Diseño del login y su funcionamiento ([516ce63b](https://github.com/maurodviveros/course_NodeJS/commit/516ce63be9ca220a1bfee8ff642955293bb6aa34))
+* 227. Configurar Socket.io ([efcc7c83](https://github.com/maurodviveros/course_NodeJS/commit/efcc7c83baa16436a99c1de72a8318d390d20179))
+* 226. Inicio de proyecto - SocketChat ([7c91e81d](https://github.com/maurodviveros/course_NodeJS/commit/7c91e81d688ad094a864d6ce4b601d407095127c))
+
+##### Bug Fixes
+
+* fix frontend ([e98fcad2](https://github.com/maurodviveros/course_NodeJS/commit/e98fcad2d11f41ee951700bcac69d89c88775fb5))
+
 ### 0.10.0 (2022-05-22)
 
 ##### New Features
