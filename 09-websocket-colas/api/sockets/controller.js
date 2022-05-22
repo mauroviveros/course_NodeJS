@@ -1,4 +1,7 @@
 "use strict";
+const Ticket = require("../tickets/ticket-control");
+
+const ticketControl = new Ticket();
 
 const connection = (socket)=>{
     console.log(`cliente conectado ${socket.id}`);
