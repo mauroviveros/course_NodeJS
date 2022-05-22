@@ -12,7 +12,7 @@ class Ticket{
 
 class TicketControl{
     constructor(){
-        this.last       = 0;
+        this.last       = 1;
         this.date       = new Date().getDate();
         this.tickets    = [];
         this.tickets4    = [];
@@ -54,7 +54,7 @@ class TicketControl{
         this.last += 1;
         this.tickets.push(new Ticket(this.last, null));
         this.saveDB();
-        return `Ticket: ${this.last}`;
+        return this.last;
     };
 
     atenderTicket(escritorio){
