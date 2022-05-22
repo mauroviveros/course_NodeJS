@@ -9,11 +9,10 @@ const validarJWT = async()=>{
         const resp = await fetch("http://localhost:8081/api/auth/", { headers:{ Authorization: token } })
         const { user, token: tokenDB } = await resp.json()
         localStorage.setItem("token", tokenDB);
-        await conectarSocket();
     } catch(error){
+        console.error(error);
         localStorage.removeItem("token");
         window.location = "/";
-        console.warn(error);
     };
 };
 
@@ -22,14 +21,29 @@ const conectarSocket = async()=>{
         "Authorization": localStorage.getItem("token")
     }});
 
-    socket.on("connection", ()=>{ console.log("conectado") });
-    socket.on("disconnection", ()=>{ console.log("conectado") });
-    socket.on("recieve_message", ()=>{});
-    socket.on("active_users", ()=>{});
-    socket.on("private_message", ()=>{});
+    socket.on("connect", ()=>{
+        const badge = document.querySelector("#status_badge");
+        badge.classList.remove("bg-danger", "border-danger", "text-danger");
+        badge.classList.add("bg-success", "border-success", "text-success");
+        badge.innerHTML = "ONLINE";
+    });
+    
+    socket.on("disconnect", ()=>{
+        const badge = document.querySelector("#status_badge");
+        badge.classList.remove("bg-success", "border-success", "text-success");
+        badge.classList.add("bg-danger", "border-danger", "text-danger");
+        badge.innerHTML = "OFFLINE";
+    });
+
+    // socket.on("recieve_message", ()=>{});
+    // socket.on("active_users", ()=>{});
+    // socket.on("private_message", ()=>{});
 }
 
 const main = async()=>{
     await validarJWT();
+    await conectarSocket();
 };
 main();
+
+
