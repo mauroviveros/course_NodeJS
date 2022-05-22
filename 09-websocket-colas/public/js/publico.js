@@ -7,6 +7,8 @@ const lblTickets = [
 ];
 
 socket.on("last_tickets", (tickets)=>{
+    const audio = new Audio("./audio/new-ticket.mp3");
+    audio.play();
     lblTickets.map((lblTicket, index)=>{
         if(tickets[index]){
             lblTicket.ticket.innerText = `Ticket ${tickets[index].numero}`;
