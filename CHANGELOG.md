@@ -1,3 +1,16 @@
+#### 0.9.1 (2022-05-22)
+
+##### New Features
+
+* 209. Broadcast - Ordenar nuestro código ([60c57942](https://github.com/maurodviveros/course_NodeJS/commit/60c57942f76d4b80df54bc5efeb5c691cf89fb14))
+* 208. Retroalimentación de emisiones del cliente hacia el servidor ([04719ea4](https://github.com/maurodviveros/course_NodeJS/commit/04719ea47834c9812fc29dfa82f7b74d5c14c749))
+* 207. Emitir desde el servidor - Escuchar en el cliente ([9d2cb624](https://github.com/maurodviveros/course_NodeJS/commit/9d2cb624bd353341625142ab1d1ab069f93975a8))
+* 206. Emitir desde el cliente - Escuchar en el servidor ([a0d5a6e1](https://github.com/maurodviveros/course_NodeJS/commit/a0d5a6e1c116a291403ffda41987cf790cbbd9f3))
+* 205. Mensajes de conexión y desconexión - Cliente ([c0b67834](https://github.com/maurodviveros/course_NodeJS/commit/c0b6783416754606f10aa55f97b0c8c1d4078a71))
+* 204. Configuración de socket.io - Front-End ([61c32089](https://github.com/maurodviveros/course_NodeJS/commit/61c32089cb68017487bde0a969ff7e9458ef4434))
+* 203. Instalación de socket.io ([9b25bd08](https://github.com/maurodviveros/course_NodeJS/commit/9b25bd088d48f8300aa1bfc16ec83929f46f43c4))
+* 202. Inicio del proyecto - Fundamentos sobre Web Sockets ([0bab3ac8](https://github.com/maurodviveros/course_NodeJS/commit/0bab3ac84e611a39f162a6cd5c8d5f1d58da2aa0))
+
 ### 0.9.0 (2022-05-21)
 
 ##### New Features
