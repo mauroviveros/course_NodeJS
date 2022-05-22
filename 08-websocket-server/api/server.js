@@ -6,6 +6,8 @@ const http      = require("http");
 const path      = require("path");
 const socketio  = require("socket.io");
 
+
+const socketCtrl = require("./sockets/controller");
 class Server{
     constructor(){
         this.PORT   = process.env.PORT;
@@ -24,19 +26,7 @@ class Server{
     };
 
     sockets(){
-        this.io.on("connection", (socket)=>{
-            console.log(`cliente conectado ${socket.id}`);
-            socket.on("disconnect", ()=>{
-                console.log(`cliente desconectado ${socket.id}`);
-            });
-
-            socket.on("send_message", (payload, callback)=>{
-                console.log(payload);
-                this.io.emit("send_message", payload);
-
-                callback();
-            });
-        });
+        this.io.on("connection", socketCtrl.connection);
     };
 
     listen(){
