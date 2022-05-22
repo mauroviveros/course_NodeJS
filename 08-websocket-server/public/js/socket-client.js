@@ -27,7 +27,9 @@ btnSend.addEventListener("click", ()=>{
         date: new Date().getTime()
     };
 
-    socket.emit("send_message", payload);
+    socket.emit("send_message", payload, ()=>{
+        console.log("Mensaje enviado Correctamente!!!");
+    });
 });
 
 socket.on("send_message", (payload)=>{

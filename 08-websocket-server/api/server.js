@@ -30,9 +30,11 @@ class Server{
                 console.log(`cliente desconectado ${socket.id}`);
             });
 
-            socket.on("send_message", (payload)=>{
+            socket.on("send_message", (payload, callback)=>{
                 console.log(payload);
                 this.io.emit("send_message", payload);
+
+                callback();
             });
         });
     };
