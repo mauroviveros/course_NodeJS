@@ -12,7 +12,7 @@ class Ticket{
 
 class TicketControl{
     constructor(){
-        this.last       = 1;
+        this.last       = 0;
         this.date       = new Date().getDate();
         this.tickets    = [];
         this.tickets4    = [];
@@ -58,12 +58,14 @@ class TicketControl{
     };
 
     atenderTicket(escritorio){
-        if(this.tickets,length == 0) return;
+        if(this.tickets.length == 0) return;
         const ticket = this.tickets.shift();
 
         ticket.escritorio = escritorio;
-        this.tickets4t.unshift(ticket).slice(0,4);
+        this.tickets4.unshift(ticket);
+        this.tickets4.slice(0,4);
 
+        this.saveDB();
         return ticket;
     };
 

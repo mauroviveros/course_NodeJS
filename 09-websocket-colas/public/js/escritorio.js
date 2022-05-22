@@ -1,3 +1,4 @@
+const socket = io();
 const searchParams = new URLSearchParams(window.location.search);
 const lblEscritorio = document.querySelector("#lblEscritorio");
 const lblTicket = document.querySelector("#lblTicket");
@@ -10,4 +11,17 @@ if(!searchParams.has("escritorio")){
     throw new Error("el Escritorio es obligatorio");
 };
 
-lblEscritorio.innerText =  searchParams.get("escritorio");
+const escritorio = searchParams.get("escritorio");
+lblEscritorio.innerText =  escritorio;
+
+btn.addEventListener("click", ()=>{
+
+    socket.emit("attend_ticket", { escritorio }, (payload)=>{
+        if(!payload){
+            lblNoTickets.style.display = "block";
+            return;
+        }
+
+        lblTicket.innerText = payload.numero;
+    });
+});
