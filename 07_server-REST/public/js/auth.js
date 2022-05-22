@@ -8,7 +8,7 @@ function handleCredentialResponse(response) {
 
     fetch("http://localhost:8081/api/auth/login/google", config)
         .then(resp => resp.json())
-        .then(resp => { localStorage.setItem("token", resp.token); })
+        .then(resp => { localStorage.setItem("token", resp.token); window.location = "/chat.html"; })
         .catch(console.warn);
 };
 
@@ -35,4 +35,6 @@ form.addEventListener("submit", (e)=>{
             };
         })
         .catch(console.warn);
-})
+});
+
+if(localStorage.getItem("token")) window.location = "/chat.html";
