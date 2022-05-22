@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Programa de Colas</title>
+    <style> #lblOnline, #lblOffline{ display: none; }; </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="./socket.io/socket.io.js" defer></script>
+    <script src="./js/socket-client.js" defer></script>
+</head>
+<body>
+    <header class="d-flex align-items-center my-1">
+        <h1 class="m-2">Programa de Colas</h1>
+        <p class="mb-0 ms-2">
+            <span id="lblOnline" class="badge bg-success border border-success text-success bg-opacity-10">ONLINE</span>
+            <span id="lblOffline" class="badge bg-danger border border-danger text-danger bg-opacity-10">OFFLINE</span>
+        </p>
+    </header>
+    <hr class="mt-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 my-4">
+                <div class="row justify-content-center">
+                    <div class="col-8 d-grid gap-2 align-self-center">
+                        <a class="btn btn-primary" href="./publico.html">Pantalla Publica</a>
+                        <a class="btn btn-secondary" href="./nuevo-ticket.html">Crear Tickets</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <form action="escritorio.html">
+                    <div class="mb-3">
+                        <label class="form-text" for="escritorio">Escritorio</label>
+                        <input type="text" class="form-control" id="escritorio" name="escritorio">
+                    </div>
+                    <button type="submit" class="btn btn-success">Ingresar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
