@@ -3,11 +3,19 @@ const fs = require("fs");
 const dir = "./tmp/";
 const filename = "websocketDB.json";
 
+class Ticket{
+    constructor(numero, escritorio){
+        this.numero = numero || 0;
+        this.escritorio = escritorio || 0;
+    };
+}
+
 class TicketControl{
     constructor(){
         this.last       = 0;
         this.date       = new Date().getDate();
         this.tickets    = [];
+        this.tickets4    = [];
 
         this.init();
     };
@@ -16,28 +24,47 @@ class TicketControl{
         return{
             last: this.last,
             date: this.date,
-            tickets: this.tickets
+            tickets: this.tickets,
+            tickets4: this.tickets4
         };
     };
-    async readDB(){
-        if(!await fs.existsSync(`${dir}${filename}`)){
-            await fs.mkdirSync(dir, { recursive: true });
-            await fs.writeFileSync(`${dir}${filename}`, JSON.stringify(this.exportDB));
+    readDB(){
+        if(!fs.existsSync(`${dir}${filename}`)){
+            fs.mkdirSync(dir, { recursive: true });
+            fs.writeFileSync(`${dir}${filename}`, JSON.stringify(this.exportDB));
         };
-        return JSON.parse(await fs.readFileSync(`${dir}${filename}`));
+        return JSON.parse(fs.readFileSync(`${dir}${filename}`));
     };
-    async saveDB(){
-        await fs.writeFileSync(`${dir}${filename}`, JSON.stringify(this.exportDB));
+    saveDB(){
+        fs.writeFileSync(`${dir}${filename}`, JSON.stringify(this.exportDB));
     };
 
     async init(){
-        const { date, last, tickets } = await this.readDB();
+        const { date, last, tickets, tickets4 } = await this.readDB();
         if(date == this.date){
             this.last = last;
             this.tickets = tickets;
+            this.tickets4 = tickets4;
         } else{
             this.saveDB();
         };
+    };
+
+    next(){
+        this.last += 1;
+        this.tickets.push(new Ticket(this.last, null));
+        this.saveDB();
+        return `Ticket: ${this.last}`;
+    };
+
+    atenderTicket(escritorio){
+        if(this.tickets,length == 0) return;
+        const ticket = this.tickets.shift();
+
+        ticket.escritorio = escritorio;
+        this.tickets4t.unshift(ticket).slice(0,4);
+
+        return ticket;
     };
 
 };
