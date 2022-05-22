@@ -32,6 +32,7 @@ class Server{
 
             socket.on("send_message", (payload)=>{
                 console.log(payload);
+                this.io.emit("send_message", payload);
             });
         });
     };

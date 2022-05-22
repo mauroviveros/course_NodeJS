@@ -2,6 +2,7 @@ const socket = io();
 const lblOnline = document.querySelector("#lblOnline");
 const lblOffline = document.querySelector("#lblOffline");
 
+const username = document.querySelector("#username");
 const txtMessage = document.querySelector("#txtMessage");
 const btnSend = document.querySelector("#btnSend");
 
@@ -19,13 +20,16 @@ socket.on("disconnect", ()=>{
 });
 
 btnSend.addEventListener("click", ()=>{
-    const message = txtMessage.value;
-    if(!message) return;
+    if(!txtMessage.value) return;
     const payload = {
-        message,
-        id: "mviveros",
+        message : txtMessage.value,
+        id: username.value,
         date: new Date().getTime()
     };
 
     socket.emit("send_message", payload);
 });
+
+socket.on("send_message", (payload)=>{
+    console.log(payload);
+})
