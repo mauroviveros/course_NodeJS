@@ -25,3 +25,16 @@ btn.addEventListener("click", ()=>{
         lblTicket.innerText = payload.numero;
     });
 });
+
+socket.on("remaining_tickets", (ticketsCount)=>{
+    if(!ticketsCount){
+        lblNoTickets.style.display = "block";
+        lblPendientes.style.display = "none";
+        btn.disabled = true;
+    } else{
+        lblNoTickets.style.display = "none";
+        lblPendientes.style.display = "block";
+        lblPendientes.innerText = ticketsCount;
+        btn.disabled = false;
+    }
+});
