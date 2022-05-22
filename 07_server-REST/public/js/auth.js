@@ -28,6 +28,11 @@ form.addEventListener("submit", (e)=>{
     };
     fetch("http://localhost:8081/api/auth/login/", config)
         .then(resp => resp.json())
-        .then(resp => { if(resp && resp.token) localStorage.setItem("token", resp.token); })
+        .then(resp => {
+            if(resp && resp.token){
+                localStorage.setItem("token", resp.token);
+                window.location = "/chat.html";
+            };
+        })
         .catch(console.warn);
 })
