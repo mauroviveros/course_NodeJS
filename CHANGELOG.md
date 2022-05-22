@@ -1,3 +1,19 @@
+### 0.10.0 (2022-05-22)
+
+##### New Features
+
+* 222. Reproducir audio cuando se asigna un ticket ([50144056](https://github.com/maurodviveros/course_NodeJS/commit/501440569f50d3d376a10717db2e2857814995a2))
+* 221. Tarea - Tickets pendientes por atender221. Tarea - Tickets pendientes por atender ([ac3222b3](https://github.com/maurodviveros/course_NodeJS/commit/ac3222b3950c9c3d9b7adc8352018db7420e5f52))
+* 218. Preparar pantalla de escritorio ([d831a9ec](https://github.com/maurodviveros/course_NodeJS/commit/d831a9ec99b30d35ba14277e40cc5552940baa19))
+* 216. Modelo - Siguiente y atender nuevo ticket ([76540dea](https://github.com/maurodviveros/course_NodeJS/commit/76540dea6bc4d97aef3a3c6e4b643b1bdc05b3f6))
+* 215. Clase para centralizar la lógica de los tickets ([8aa85c5b](https://github.com/maurodviveros/course_NodeJS/commit/8aa85c5bba735fc71087aa174bf48848e6eb305e))
+* 214. Inicio de proyecto - Aplicación de Colas ([b4b29ace](https://github.com/maurodviveros/course_NodeJS/commit/b4b29ace5c26a87587531e54c151265504672c31))
+
+##### Other Changes
+
+*  Atender un ticket ([15b5056c](https://github.com/maurodviveros/course_NodeJS/commit/15b5056c442331d8ed9c848c0f70db2fecfd8306))
+*  Siguiente Ticket ([e5ec726f](https://github.com/maurodviveros/course_NodeJS/commit/e5ec726f17eca90c25133e9433573b33ce73a6f9))
+
 #### 0.9.1 (2022-05-22)
 
 ##### New Features
