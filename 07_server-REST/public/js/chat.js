@@ -37,11 +37,29 @@ const conectarSocket = async()=>{
     });
 
     // socket.on("recieve_message", ()=>{});
-    socket.on("active_users", (payload)=>{
-        console.log(payload);
-    });
+    socket.on("active_users", drawUsers);
     // socket.on("private_message", ()=>{});
-}
+};
+
+const drawUsers = (users = [])=>{
+    let usersHTML = "";
+    const ulUsers = document.querySelector("ul#users");
+
+    users.forEach(({ name, _id })=>{
+        usersHTML += `
+            <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-column">
+                    <span>${name}</span>
+                    <small class="text-muted">${_id}</small>
+                </div>
+                <span class="p-2 rounded-circle bg-success"></span>
+            </li>
+        `;
+    });
+
+    ulUsers.innerHTML = usersHTML;
+
+};
 
 const main = async()=>{
     await validarJWT();
