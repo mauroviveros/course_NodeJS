@@ -6,7 +6,7 @@ function handleCredentialResponse(response) {
         body: JSON.stringify(body)
     };
 
-    fetch("http://localhost:8081/api/auth/login/google", config)
+    fetch("/api/auth/login/google", config)
         .then(resp => resp.json())
         .then(resp => { localStorage.setItem("token", resp.token); window.location = "/chat.html"; })
         .catch(console.warn);
@@ -26,7 +26,7 @@ form.addEventListener("submit", (e)=>{
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
     };
-    fetch("http://localhost:8081/api/auth/login/", config)
+    fetch("/api/auth/login/", config)
         .then(resp => resp.json())
         .then(resp => {
             if(resp && resp.token){

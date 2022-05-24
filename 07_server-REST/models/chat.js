@@ -1,10 +1,12 @@
 "use strict";
 
 class Message{
-    constructor(_id, name, message){
-        this._id = _id;
-        this.name = name;
+    constructor(message, user){
         this.message = message;
+        this.user = {
+            _id : user._id,
+            name: user.name
+        };
     };
 };
 
@@ -15,15 +17,18 @@ class Chat{
     };
 
     get lastMessages(){
-        return this.messages.splice(0, 10);
+        this.messages = this.messages.splice(0, 10);
+        return this.messages;
     };
 
     get usersArr(){
         return Object.values(this.users);
     };
 
-    enviarMensaje(_id, name, message){
-        this.messages.unshift(new Message(_id, name, message));
+    addMessage(message, user){
+        console.log(this.messages);
+        this.messages.push(new Message(message, user));
+        console.log(this.messages);
     };
 
     addUser(user){

@@ -1,14 +1,18 @@
-// const socket = io();
+"use strict";
 
-// socket.on("connection");
+const formMessage = document.querySelector("form#message");
+
+let user = null;
+let socket  = null;
 
 const validarJWT = async()=>{
     const token = localStorage.getItem("token");
     if(!token) return window.location = "/";
     try{
-        const resp = await fetch("http://localhost:8081/api/auth/", { headers:{ Authorization: token } })
+        const resp = await fetch("/api/auth/", { headers:{ Authorization: token } })
         if(resp.status != 200) throw new Error("error");
-        const { user, token: tokenDB } = await resp.json()
+        const { user: userDB, token: tokenDB } = await resp.json();
+        user = userDB;
         localStorage.setItem("token", tokenDB);
     } catch(error){
         console.error(error);
@@ -18,7 +22,7 @@ const validarJWT = async()=>{
 };
 
 const conectarSocket = async()=>{
-    const socket = io({ extraHeaders: {
+    socket = io({ extraHeaders: {
         "Authorization": localStorage.getItem("token")
     }});
 
@@ -36,7 +40,9 @@ const conectarSocket = async()=>{
         badge.innerHTML = "OFFLINE";
     });
 
-    // socket.on("recieve_message", ()=>{});
+    socket.on("messages", (payload)=>{
+        console.log(payload);
+    });
     socket.on("active_users", drawUsers);
     // socket.on("private_message", ()=>{});
 };
@@ -56,10 +62,17 @@ const drawUsers = (users = [])=>{
             </li>
         `;
     });
-
     ulUsers.innerHTML = usersHTML;
-
 };
+
+formMessage.addEventListener("submit", (e)=>{
+    e.preventDefault();
+    const message = e.target[0].value.trim();
+    e.target[0].value = null;
+    if(!message) return;
+
+    socket.emit("response_message", message);
+});
 
 const main = async()=>{
     await validarJWT();

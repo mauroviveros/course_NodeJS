@@ -16,7 +16,12 @@ const socketController = async (socket, io)=>{
         io.emit("active_users", chat.usersArr);
     });
 
-    console.log("cliente conectado", user.name);
+    socket.on("response_message", (message)=>{
+        chat.addMessage(message, user);
+        io.emit("messages", chat.lastMessages);
+    })
+
+    // console.log("cliente conectado", user.name);
 };
 
 
