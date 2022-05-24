@@ -40,9 +40,7 @@ const conectarSocket = async()=>{
         badge.innerHTML = "OFFLINE";
     });
 
-    socket.on("messages", (payload)=>{
-        console.log(payload);
-    });
+    socket.on("messages", drawMesssages);
     socket.on("active_users", drawUsers);
     // socket.on("private_message", ()=>{});
 };
@@ -53,7 +51,7 @@ const drawUsers = (users = [])=>{
 
     users.forEach(({ name, _id })=>{
         usersHTML += `
-            <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+            <li class="list-group-item d-flex justify-content-between align-items-center ${_id == user._id ? "list-group-item-dark": "list-group-item-action"}">
                 <div class="d-flex flex-column">
                     <span>${name}</span>
                     <small class="text-muted">${_id}</small>
@@ -64,6 +62,31 @@ const drawUsers = (users = [])=>{
     });
     ulUsers.innerHTML = usersHTML;
 };
+const drawMesssages = (messages = [])=>{
+    let messagesHTML = "";
+    const divMessages = document.querySelector("#messages");
+    messages = messages.reverse();
+    messages.forEach((message)=>{
+        const text_color = message.user._id == user._id ? "text-bg-light" : "text-bg-primary";
+        const header = message.user._id == user._id ? "" : `<div class="card-header">${message.user.name}</div>`;
+        const align = message.user._id == user._id ? "align-items-end" : "align-items-start";
+
+        messagesHTML += `
+            <div class="d-flex flex-column ${align}" style="width:100%">
+                <div class="card ${text_color} mb-2">
+                    ${header}
+                    <div class="card-body">
+                        <p class="card-text">${message.message}</p>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+    divMessages.innerHTML = messagesHTML;
+    divMessages.scrollTo(0, divMessages.scrollHeight)
+};
+
+
 
 formMessage.addEventListener("submit", (e)=>{
     e.preventDefault();

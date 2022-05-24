@@ -17,27 +17,15 @@ class Chat{
     };
 
     get lastMessages(){
-        this.messages = this.messages.splice(0, 10);
+        this.messages = this.messages.splice(0, 100);
         return this.messages;
     };
 
-    get usersArr(){
-        return Object.values(this.users);
-    };
+    get usersArr(){ return Object.values(this.users); };
 
-    addMessage(message, user){
-        console.log(this.messages);
-        this.messages.push(new Message(message, user));
-        console.log(this.messages);
-    };
-
-    addUser(user){
-        this.users[user._id] = user;
-    };
-
-    deleteUser(userID){
-        delete this.users[userID];
-    };
+    addMessage(message, user){ this.messages.unshift(new Message(message, user)); };
+    addUser(user){ this.users[user._id] = user; };
+    deleteUser(userID){ delete this.users[userID]; };
 };
 
 module.exports = Chat;
