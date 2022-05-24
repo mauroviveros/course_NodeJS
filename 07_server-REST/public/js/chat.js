@@ -7,6 +7,7 @@ const validarJWT = async()=>{
     if(!token) return window.location = "/";
     try{
         const resp = await fetch("http://localhost:8081/api/auth/", { headers:{ Authorization: token } })
+        if(resp.status != 200) throw new Error("error");
         const { user, token: tokenDB } = await resp.json()
         localStorage.setItem("token", tokenDB);
     } catch(error){
@@ -36,7 +37,9 @@ const conectarSocket = async()=>{
     });
 
     // socket.on("recieve_message", ()=>{});
-    // socket.on("active_users", ()=>{});
+    socket.on("active_users", (payload)=>{
+        console.log(payload);
+    });
     // socket.on("private_message", ()=>{});
 }
 

@@ -1,12 +1,20 @@
 "use strict";
 
-const { Socket } = require("socket.io"); //!
 const { comprobarJWT } = require("../helpers/jwt");
+const Chat = require("../models/chat");
+const chat = new Chat();
 
-
-const socketController = async (socket = new Socket)=>{
+const socketController = async (socket, io)=>{
     const user = await comprobarJWT(socket.handshake.headers["authorization"]);
     if (!user) return socket.disconnect();
+
+    chat.addUser(user);
+    io.emit("active_users", chat.usersArr);
+
+    socket.on("disconnect", ()=>{
+        chat.deleteUser(user._id);
+        io.emit("active_users", chat.usersArr);
+    });
 
     console.log("cliente conectado", user.name);
 };
