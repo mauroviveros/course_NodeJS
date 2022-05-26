@@ -16,6 +16,7 @@ module.exports = {
     "@typescript-eslint"
   ],
   "rules": {
+    "ignoreRestSiblings": true,
     "indent": [
       "error",
       2
