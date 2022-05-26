@@ -28,4 +28,7 @@ class Chat{
     deleteUser(userID){ delete this.users[userID]; };
 };
 
-module.exports = Chat;
+module.exports = {
+    Chat,
+    Message
+};

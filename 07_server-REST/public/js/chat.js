@@ -1,6 +1,7 @@
 "use strict";
 
 const formMessage = document.querySelector("form#message");
+const logoutBtn = document.querySelector("#logout");
 
 let user = null;
 let socket  = null;
@@ -13,6 +14,7 @@ const validarJWT = async()=>{
         if(resp.status != 200) throw new Error("error");
         const { user: userDB, token: tokenDB } = await resp.json();
         user = userDB;
+        user._id = user._id.toString();
         localStorage.setItem("token", tokenDB);
     } catch(error){
         console.error(error);
@@ -42,7 +44,7 @@ const conectarSocket = async()=>{
 
     socket.on("messages", drawMesssages);
     socket.on("active_users", drawUsers);
-    // socket.on("private_message", ()=>{});
+    socket.on("private_message", appendPrivateMessage);
 };
 
 const drawUsers = (users = [])=>{
@@ -85,16 +87,42 @@ const drawMesssages = (messages = [])=>{
     divMessages.innerHTML = messagesHTML;
     divMessages.scrollTo(0, divMessages.scrollHeight)
 };
+const appendPrivateMessage = (message, itsMe)=>{
+    const divMessages = document.querySelector("#messages");
+    const cardMessage = document.createElement("div");
+
+    const text_color = "text-bg-dark";
+    const header = itsMe ? `<div class="card-header">Susurra a @${message.to}</div>` : `<div class="card-header">${message.user.name}</div>`;
+    const align = itsMe ? "align-items-end" : "align-items-start";
+
+    cardMessage.classList.add(`d-flex`);
+    cardMessage.classList.add(`flex-column`);
+    cardMessage.classList.add(`${align}`);
+    cardMessage.style.width = "100%";
+    cardMessage.innerHTML = `<div class="card ${text_color} mb-2">${header}<div class="card-body"><p class="card-text">${message.message}</p></div></div>`;
+
+    divMessages.append(cardMessage);
+};
 
 
 
 formMessage.addEventListener("submit", (e)=>{
     e.preventDefault();
-    const message = e.target[0].value.trim();
+    let message = e.target[0].value.trim();
+    let toUserID = message.match(/^(@+[\w\-]+)/i);
     e.target[0].value = null;
     if(!message) return;
+    if(toUserID){
+        message = message.replace(toUserID[0], "").trim();
+        toUserID = toUserID[0].replace("@", "");
+        appendPrivateMessage({ message, user, to: toUserID }, true);
+    };
+    socket.emit("response_message", { message, toUserID });
+});
 
-    socket.emit("response_message", message);
+logoutBtn.addEventListener("click", (e)=>{
+    localStorage.removeItem("token");
+    window.location = "/";
 });
 
 const main = async()=>{

@@ -19,28 +19,23 @@
 </head>
 <body class="container d-flex flex-column justify-content-center">
     <div class="card text-bg-light">
-        <div class="card-header d-flex align-items-center">
-            <h1>Sala de Chat</h1>
-            
-            <span id="status_badge" class="badge border bg-opacity-10 ms-2">LOADING</span>
+        <div class="card-header d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+                <h1>Sala de Chat</h1>
+                <span id="status_badge" class="badge border bg-opacity-10 ms-2">LOADING</span>
+            </div>
+            <button type="button" id="logout" class="btn btn-outline-danger right">Logout</button>
         </div>
         <main class="d-flex">
             <aside class="card-body border-end" style="flex: 2 1 0px;">
                 <ul class="list-group" id="users"></ul>
             </aside>
             <section class="d-flex flex-column" style="flex: 4 1 0px;">
-                <div class="card-body" id="messages">
-                    <!-- <div class="card text-bg-dark mb-2">
-                        <div class="card-header">Vendedor1</div>
-                        <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div> -->
-                </div>
+                <div class="card-body" id="messages"></div>
                 <div class="card-footer ">
                     <form id="message">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="message..." id="message" name="message" autocomplete="off">
+                            <input type="text" class="form-control" placeholder="message... | @userid &lt;susurro&gt;" id="message" name="message" autocomplete="off">
                             <button class="btn btn-outline-secondary" type="submit">Enviar</button>
                           </div>
                     </form>
