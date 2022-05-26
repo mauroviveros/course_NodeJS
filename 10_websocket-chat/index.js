@@ -1,5 +1,5 @@
 "use strict";
-require("dotenv").config({ path: `${__dirname}/.env` });
+require("dotenv").config();
 const Server = require("./models/express");
 const SERVER = new Server();
 

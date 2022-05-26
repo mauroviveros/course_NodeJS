@@ -56,10 +56,17 @@ const googleLogin = async (req, res)=>{
     } catch(error){
         console.log(error);
         return res.status(500).json({ message: error.message });
-    }
+    };
 };
+
+const validateLogin = async (req, res)=>{
+    const { user } = req;
+    const token = await generarJWT(user._id);
+    return res.json({ user, token });
+}
 
 module.exports = {
     login,
-    googleLogin
+    googleLogin,
+    validateLogin
 };

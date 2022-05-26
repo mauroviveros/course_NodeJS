@@ -1,25 +1,32 @@
 "use strict";
-const express = require("express");
-const path = require("path");
-const cors = require("cors");
-const fileUpload = require("express-fileupload");
+const express       = require("express");
+const cors          = require("cors");
+const fileUpload    = require("express-fileupload");
+const socketio      = require("socket.io");
+const path          = require("path");
+const http          = require("http");
 
 const { dbConnection } = require("../database/database.config");
 
 const userRoutes        = require("../routes/user.routes");
 const authRoutes        = require("../routes/auth.routes");
-const categoryRoutes  = require("../routes/category.routes");
-const productRoutes    = require("../routes/product.routes");
-const uploadRoutes    = require("../routes/upload.routes");
+const categoryRoutes    = require("../routes/category.routes");
+const productRoutes     = require("../routes/product.routes");
+const uploadRoutes      = require("../routes/upload.routes");
+
+const socketCtrl        = require("../sockets/controller");
 
 class Server{
     constructor(){
         this.app = express();
         this.PORT = process.env.PORT;
+        this.server = http.createServer(this.app);
+        this.io     = socketio(this.server);
 
         this.connectDB();
         this.middlewares();
         this.routes();
+        this.sockets();
     };
 
     async connectDB(){
@@ -46,8 +53,12 @@ class Server{
         this.app.use("/api/uploads", uploadRoutes);
     };
 
+    sockets(){
+        this.io.on("connection", (socket) => socketCtrl(socket, this.io));
+    };
+
     listen(){
-        this.app.listen(this.PORT, ()=>{
+        this.server.listen(this.PORT, ()=>{
             console.log(`http://localhost:${this.PORT}`);
         });
     };
