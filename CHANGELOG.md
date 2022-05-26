@@ -1,3 +1,9 @@
+#### 0.11.1 (2022-05-26)
+
+##### Bug Fixes
+
+* move websocket-chat ([eeae06c0](https://github.com/maurodviveros/course_NodeJS/commit/eeae06c08e57101a1c2407ff46026804d21e6919))
+
 ### 0.11.0 (2022-05-26)
 
 ##### New Features
