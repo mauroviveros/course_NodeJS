@@ -1,3 +1,14 @@
+### 0.11.0 (2022-05-26)
+
+##### New Features
+
+* 238. Mensajes privados ([28ff765b](https://github.com/maurodviveros/course_NodeJS/commit/28ff765bce0d755424216c0b0d220e600260400d))
+* 237. Historial de mensajes en el HTML ([72a68f4d](https://github.com/maurodviveros/course_NodeJS/commit/72a68f4dc94df6b6f5e3d65d8b25cc46aabb7cbc))
+* 236. Envío de mensajes a toda la sala de chat ([edd52700](https://github.com/maurodviveros/course_NodeJS/commit/edd527007d895481dfa61ab3e848c3e0757d0568))
+* 235. Mostar en el HTML los usuarios conectados ([b30ce681](https://github.com/maurodviveros/course_NodeJS/commit/b30ce681083a5bdc30cc0b66c0bdd0d30c82a650))
+* 234. Listado de usuarios conectados ([eab4be87](https://github.com/maurodviveros/course_NodeJS/commit/eab4be876e0f4c1ee97e8f4676f08e6d7bf24186))
+* 233. Modelo para el manejo de usuarios conectados y mensajes ([1f501b95](https://github.com/maurodviveros/course_NodeJS/commit/1f501b9527b7d9b90848f6a07ee640f4ce74ae95))
+
 #### 0.10.1 (2022-05-22)
 
 ##### New Features
