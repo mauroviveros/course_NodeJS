@@ -1,3 +1,12 @@
+#### 0.11.2 (2022-05-26)
+
+##### New Features
+
+* 244. Rutas de mi aplicación ([5e51fb9f](https://github.com/maurodviveros/course_NodeJS/commit/5e51fb9fc6bcc51d2f642f1a130549f6bd813078))
+* 243. Nodemon y TSC --watch ([6f64bfaa](https://github.com/maurodviveros/course_NodeJS/commit/6f64bfaafd39ab3f4e9930dbac5c6574466d771c))
+* 242. Crear el servidor de express y sus middlewares ([fe7787c4](https://github.com/maurodviveros/course_NodeJS/commit/fe7787c4aef8e860b892ac7cc50a9f5bfe0f9e2e))
+* 241. Inicio de proyecto - ts-rest-server ([24e88d36](https://github.com/maurodviveros/course_NodeJS/commit/24e88d3606ee6aad97efca19b509b1ef6ac2ba0c))
+
 #### 0.11.1 (2022-05-26)
 
 ##### Bug Fixes
