@@ -1,4 +1,5 @@
 # Course: NodeJS
+*NodeJS: De cero a experto*  
 
 ![NodeJS][nodejs-badge]
 ![Express.js][expressjs-badge]
@@ -6,7 +7,6 @@
 ![MongoDB][mongodb-badge]
 ![TypeScript][typescript-badge]
 
-*NodeJS: De cero a experto*  
 
 👤 **Autor**: *Mauro Daniel Viveros (TRY Ubbe)*  
 👨‍🏫 **Teacher**: *Fernando Herrera*  
