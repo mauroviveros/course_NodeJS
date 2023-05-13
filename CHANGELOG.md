@@ -1,3 +1,13 @@
+# [1.0.0](https://github.com/maurodviveros/course_NodeJS/compare/v0.11.2...v1.0.0) (2023-05-13)
+
+
+### Features
+
+* :arrow_up: upgrade dependencies ([66a91f2](https://github.com/maurodviveros/course_NodeJS/commit/66a91f23f57a5406f48bdd7a36f42c9410373669))
+* :package: update package.json ([8433b4d](https://github.com/maurodviveros/course_NodeJS/commit/8433b4df3d718f130c3035ccf584ebf2a9fe7e9c))
+
+
+
 #### 0.11.2 (2022-05-26)
 
 ##### New Features
