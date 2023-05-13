@@ -34,6 +34,12 @@ $ npm start
 > - OPENWEATHER_TOKEN: [OpenWeather API][openweather-link]
 > - GOOGLE_CLIENT_ID / GOOGLE_SECRET_ID: [OAuth Credentials API][google_credentials-link]
 
+# 📋 Usage
+exec `node command` per exercise/folder, Example:
+```bash
+$ node 01_hola-mundo
+```
+
 ## 📜 License
 MIT © [Mauro Daniel Viveros][github-profile]
 
